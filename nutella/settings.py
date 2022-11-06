@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-e=)8jg3*gnf33j0#tbya&!0)xhqo@l!p)d0k3rc7l*)ns10c8!"
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -76,16 +79,21 @@ WSGI_APPLICATION = "nutella.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "nutella.product",
-        "USER": "leme",
-        "PASSWORD": "password",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "project8",
+        "USER": "baraa",
+        "PASSWORD": "m3044",
         "HOST": "localhost",
-        "PORT": "",
+        "PORT": "5432",
     }
 }
 
-
+if os.environ.get("ENV") == "PRODUCTION":
+    DEBUG = False
+    db_from_env = dj_database_url.config(conn_max_age=500)
+    DATABASES["default"].update(db_from_env)
+else:
+    DEBUG = True
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
