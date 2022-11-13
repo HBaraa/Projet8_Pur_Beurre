@@ -1,0 +1,154 @@
+﻿{% extends 'base.html' %}
+{% block content %}
+<nav class="col-lg-12 navbar navbar-expand" id="mainNav">
+    <div class="container  bg-dark">
+        <div class="col-12">
+            <div class="row" style=" visibility:visible; position:relative; left:10px;">
+                <div class="col-3">
+                    <div class="row">
+                        <img src="../static/images/logo.png" width="40" height="40"/>
+                        <p style="color:#2275e2;"> Pur Beurre </p>
+                    </div>
+                </div>
+                <div class="col-6 mb-2">
+                    <div class="row" style="position:relative; top:4px; width:200px; left:60%;">
+                        <form role="search" method="get" class="search-form" action="http://localhost/wordpress/">
+                            <input id="question" name="question" type="text" maxlength="50"
+                            class="form-control"
+                            autocomplete="off"
+                            placeholder="Chercher"
+                            style="border: none; background-color:rgb(171, 178, 185); background-image: url('../static/images/searchicon.png'); background-position:  90% 50%; background-size: 20px 20px; background-repeat: no-repeat;"
+                            required/>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="connected">
+                        <img src="../static/images/user.png" width="30" height="30" style="position:relative; top:4px"/>
+                        <p style="color:#2275e2;"></p>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <img src="../static/images/aliment.png" width="30" height="30" style="position:relative; top:4px"/>
+                    <p style="color:#2275e2;">     </p>
+                </div>
+                <div class="col-1">
+                    <div class="deconnecter">
+                        <img src="../static/images/deconnect.png" width="30" height="30" style="position:relative; top:4px"/>
+                        <p style="color:#2275e2;"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container text-center">
+    <div class="home" id="home" style=" visibility:visible; position:relative; top:0px;">
+        <div class="row" style="position:relative; top:0px; border: none;">
+                <div class=" col-lg-12 text-center d-block w-1000 ">
+                    <section class="main-section" id="signup" style="position:relative; top:0px;">
+                        <div class="card" style="border: 1px solid black; background-image: url('../static/images/food.png');  background-repeat: repeat; background-size: 400px; background-position: 50px 10px background-color: rgba(241, 213, 243, 0.986); padding:12px;
+                        margin-bottom:20px;">
+                            <h1>Du gras, oui, mais de qualité!</h1>
+                            <h2>Trouvez un produit de substitution pour ceux que vous consommez tous les jours</h2>
+                            <div class="card-body">
+                                <form id="user-text-form">
+                                    <div class="input-group">
+                                        <div class="chat-avatar">
+                                            <a class="avatar avatar-online" data-toggle="tooltip" href="#"
+                                                data-placement="left" title="">
+                                                <i></i>
+                                            </a>
+                                        </div>
+                                        <input id="question" name="question" type="text" maxlength="100"
+                                            class="form-control"
+                                            autocomplete="off"
+                                            placeholder="Vous cherchez quel produit?"
+                                            style="border: 1px solid black;"
+                                            required/>
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-secondary" id="demand" type="submit">Chercher</button>
+                                        </span>
+                                        <div id="output"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="d-block w-400 ">
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 mb-5">
+        <div class="row">
+            <div class="container text-center" style="position:relative; top:65%">
+                <h2>Colette et Remy </h2>
+                <span class="input-group-btn">
+                    <button class="btn btn-secondary" id="history" type="submit" style="border: none; background-color: rgb(245, 203, 167)">History</button>
+                </span>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="card" style="position:relative; left:60%">
+                            <div class="card-body">
+                                <div class="connected">
+                                    <img src="../static/images/colettepic.png" width="100" height="100"/>
+                                    <p style="color:#2275e2;"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" style="position:relative; left:90%">
+                            <div class="card-body">
+                                <div class="connected">
+                                    <img src="../static/images/remypic.png" width="100" height="100"/>
+                                    <p style="color:#2275e2;"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="col-12 mb-5">
+        <div class="row">
+            <section class="contact" id="contact" style=" visibility:visible; position:relative; top:85%; left:25%">
+                <div class="container text-center">
+                    <div class="row justify-content-center">
+                        <div class="col text-center">
+                            <p class="text-muted mb-5">Pour vos questions, appelez-nous ou envoyez-nous un email, nous vous contacterons aussi vite que possible!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0" style="position:relative; right:15%">
+                            <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                            <P class="text-muted mb-5">+33 0 00 00 00 00</P>
+                        </div>
+                        <div class="col-lg-4 mr-auto text-center" style="position:relative; left:0%">
+                            <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                            <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
+                            <a class="d-block" href="aaaaa@------">aaaaa@------</a>
+                        </div>
+                    </div>
+                    <hr class="divider my-4" />
+                </div>
+            </section>
+        </div>
+    </div>
+<div class="col-12" style="border: 1px solid black; visibility:visible; position:relative; top:90%; left:27%; width:600">
+    <div class="row text-center">
+            <div class="col-6" style="position:relative; left:8%">
+                <div class="row">
+                    <a class="nav-link" href= "http://127.0.0.1:8000/mention/" >Mention légale</a>
+                </div>
+            </div>
+            <div class="col-6" style="position:relative; left:26%">
+                <div class="row">
+                    <a class="nav-link" id="startpresent" style="visibility: visible;"
+                    href="#contact">contact</a>
+                </div>
+            </div>
+    </div>
+</div>
+{% endblock %}

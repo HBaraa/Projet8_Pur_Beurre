@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Product, Category, Favorite
 
-# Register your models here.
+
+@admin.register(Product, Category, Favorite)
+class GenericAdmin(admin.ModelAdmin):
+    pass
