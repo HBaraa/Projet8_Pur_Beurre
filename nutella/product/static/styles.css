@@ -1,0 +1,214 @@
+﻿#question {
+    border: none;
+    background-color: rgb(172, 214, 224);
+    background-image: url('../static/images/searchicon.png');
+    background-position: 90% 50%;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.searchprod {
+    border: none;
+    background-color: rgb(219, 181, 158);
+    border: 1px solid black;
+}
+
+
+#countainerNav {
+    border: 1px solid black;
+}
+
+#champ1 {
+    visibility: visible;
+    position: relative;
+    top: 8px;
+    left: 10px;
+}
+
+#champ2 {
+    position: relative;
+    top: 8px;
+    width: 200px;
+    left: 50%;
+}
+
+#contForm {
+    background-color: rgba(188, 48, 55, 0.971);
+}
+
+#connect {
+    height: 900px;
+    width: 700px;
+    position: relative;
+    left: 23%;
+    top: 0%;
+    background-image: url('../static/images/accueilbg.png');
+    background-repeat: no-repeat;
+    background-size: 900px 700px;
+    background-position: 0px 0px;
+}
+
+.logIn {
+    left: 45%;
+}
+
+#logForm {
+    background-color: rgba(87, 230, 204, 0.918);
+}
+
+#phrasestyle {
+    top: 30%;
+    width: 200px;
+    color: #C45525;
+}
+
+.formulaire {
+    background-color: rgba(198, 233, 239, 0.918);
+    top: 8%;
+    right: 23%;
+}
+
+#bouton {
+    border: 0px;
+    position: relative;
+    left: 30%;
+}
+
+.inscription {
+    position: relative;
+    left: 15%;
+    bottom: 14%;
+    background-image: url('../static/images/accueilbg.png');
+    background-repeat: no-repeat;
+    background-size: 1133px 900px;
+    background-position: 0px 130px;
+
+}
+
+.connected {
+    left: 80%;
+}
+
+.login {
+    position: relative;
+    top: 0px;
+    width: 52px;
+    height: 52px;
+}
+
+.menu {
+    position: relative;
+    top: 0px;
+    width: 60px;
+    height: 60px;
+}
+
+#homeacc {
+    visibility: visible;
+    position: relative;
+    top: 0px;
+}
+
+#bgcard {
+    border: 1px solid black;
+    background-image: url('../static/images/bghome.png');
+    background-repeat: no-repeat;
+    background-size: 1200px;
+    background-position: 0px 0px;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+#accueil {
+    position: relative;
+    top: 0px;
+}
+
+#ligne {
+    position: relative;
+    top: 0px;
+    border: none;
+}
+
+.p {
+    color: #2275e2;
+}
+
+#logoImg {
+    width: 40px;
+    height: 40px;
+}
+
+#userImg {
+    position: relative;
+    top: 10px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+}
+
+#menuImg {
+    position: relative;
+    bottom: 30px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+#logOut {
+    position: relative;
+    bottom: 70px;
+    left: 130px;
+    width: 30px;
+    height: 30px;
+}
+
+#alignement {
+    visibility: visible;
+    position: relative;
+    top: 8px;
+    left: 10px;
+}
+
+#cadreNav {
+    border: 1px solid black;
+    height: 100px;
+}
+
+#remyetcolette {
+    position: relative;
+    top: 65%;
+}
+
+#history {
+    border: none;
+    background-color: rgb(245, 203, 167)
+}
+
+#colettecard {
+    position: relative;
+    left: 60%
+}
+
+#remycard {
+    position: relative;
+    left: 90%;
+}
+
+#coletteImg {
+    width: 110px;
+    height: 110px;
+}
+
+#remyImg {
+    width: 110px;
+    height: 110px;
+}
+
+#title1 {
+    color: #f1b094;
+}
+
+#title2 {
+    color: #86EBE6;
+}
