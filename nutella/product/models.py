@@ -87,13 +87,17 @@ class CustomUserManager(BaseUserManager):
 
 
 class CustomUser(AbstractBaseUser):
-    first_name = models.CharField(max_length=100, blank=True)
-    Last_name = models.CharField(max_length=100, blank=True)
+    first_name = models.CharField(max_length=254, blank=True)
+    second_name = models.CharField(max_length=254, blank=True)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     email = models.EmailField(blank=True, unique=True)
 
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = ["first_name", "second_name"]
+
     objects = CustomUserManager()
 
-    USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ["first_name", "Last_name"]
+    class Meta:
+        verbose_name = _("user")
+        verbose_name_plural = _("users")

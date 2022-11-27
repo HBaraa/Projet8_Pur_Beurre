@@ -23,7 +23,6 @@ class SignUpForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         super(SignUpForm, self).__init__(*args, **kwargs)
 
-
-class Meta:
-    model = CustomUser
-    fields = ("email", "first_name", "second_name")
+    class Meta:
+        model = CustomUser
+        fields = ("email", "first_name", "second_name")
