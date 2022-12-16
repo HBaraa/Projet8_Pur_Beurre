@@ -9,22 +9,27 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import django
 from pathlib import Path
 import os
 from django.conf import settings
+
 
 settings.configure(DEBUG=True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+# django.setup()
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
+# DJANGO_SETTINGS_MODULE = os.environ.get("DJANGO_SETTINGS_MODULE")
+
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "nutella.settings")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

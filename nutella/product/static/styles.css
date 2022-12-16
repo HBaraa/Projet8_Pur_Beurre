@@ -37,8 +37,8 @@
 }
 
 #connect {
-    height: 900px;
-    width: 700px;
+    height: 700px;
+    width: 900px;
     position: relative;
     left: 23%;
     top: 0%;
@@ -49,12 +49,9 @@
 }
 
 .logIn {
-    left: 45%;
+    left: 40%;
 }
 
-#logForm {
-    background-color: rgba(87, 230, 204, 0.918);
-}
 
 #phrasestyle {
     top: 30%;

@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Product, Category, Favorite, CustomUser
+from .models import Products, Categories, Favorite, CustomUser
 
 
-@admin.register(Product, Category, Favorite, CustomUser)
+@admin.register(Products, Categories, Favorite, CustomUser)
 class GenericAdmin(admin.ModelAdmin):
     pass

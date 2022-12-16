@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import BigAutoField
 from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.utils.translation import gettext_lazy as _
@@ -7,33 +8,27 @@ from django.utils.translation import gettext_lazy as _
 # from django.contrib.auth.models import PermissionsMixin
 
 
-class Category(models.Model):
-    name = models.CharField(max_length=100, unique=True)
-
-    class Meta:
-        verbose_name = "Category"
-        verbose_name_plural = "Categories"
-        ordering = ["name"]
+class Categories(models.Model):
+    name = models.TextField(unique=True, null=True)
 
     def __str__(self):
         return self.name
 
 
 # Create your models here.
-class Product(models.Model):
-    name = models.fields.CharField(max_length=100)
-    code = models.fields.IntegerField()
-    details = models.fields.CharField(max_length=1000)
-    link = models.URLField(unique=True, null=True)
-    image = models.URLField(null=True)
-    prod_store = models.fields.CharField(max_length=150, null=True)
-    nutriscore = models.fields.CharField(max_length=1)
-    categories = models.ManyToManyField("Category", related_name="products")
+class Products(models.Model):
+    name = models.fields.TextField()
+    code = models.fields.TextField()
+    details = models.fields.TextField()
+    link = models.URLField(null=True)
+    image_large = models.TextField(null=True)
+    image_small = models.TextField(null=True)
+    prod_store = models.fields.TextField(null=True)
+    nutriscore = models.fields.TextField()
+    category = models.ManyToManyField(Categories)
 
     class Meta:
-        verbose_name = "Produit"
-        verbose_name_plural = "Produits"
-        ordering = ["name"]
+        db_table = "product"
 
     def __str__(self):
         return self.name
@@ -42,10 +37,10 @@ class Product(models.Model):
 class Favorite(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     substitute = models.ForeignKey(
-        Product, on_delete=models.CASCADE, related_name="substitute"
+        Products, on_delete=models.CASCADE, related_name="substitute"
     )
     product = models.ForeignKey(
-        Product, on_delete=models.CASCADE, related_name="produit"
+        Products, on_delete=models.CASCADE, related_name="produit"
     )
 
     class Meta:
@@ -87,8 +82,8 @@ class CustomUserManager(BaseUserManager):
 
 
 class CustomUser(AbstractBaseUser):
-    first_name = models.CharField(max_length=254, blank=True)
-    second_name = models.CharField(max_length=254, blank=True)
+    first_name = models.TextField(max_length=254, blank=True)
+    second_name = models.TextField(max_length=254, blank=True)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     email = models.EmailField(blank=True, unique=True)
