@@ -9,23 +9,24 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Categories(models.Model):
-    name = models.TextField(unique=True, null=True)
+    category = models.TextField(unique=True, null=True)
 
     def __str__(self):
-        return self.name
+        return self.category
 
 
 # Create your models here.
 class Products(models.Model):
     name = models.fields.TextField()
-    code = models.fields.TextField()
     details = models.fields.TextField()
     link = models.URLField(null=True)
     image_large = models.TextField(null=True)
     image_small = models.TextField(null=True)
     prod_store = models.fields.TextField(null=True)
     nutriscore = models.fields.TextField()
-    category = models.ManyToManyField(Categories)
+    category = models.ForeignKey(
+        Categories, verbose_name=_("category"), on_delete=models.CASCADE, null=True
+    )
 
     class Meta:
         db_table = "product"
@@ -82,8 +83,8 @@ class CustomUserManager(BaseUserManager):
 
 
 class CustomUser(AbstractBaseUser):
-    first_name = models.TextField(max_length=254, blank=True)
-    second_name = models.TextField(max_length=254, blank=True)
+    first_name = models.CharField(max_length=254, blank=True)
+    second_name = models.CharField(max_length=254, blank=True)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     email = models.EmailField(blank=True, unique=True)

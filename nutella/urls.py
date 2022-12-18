@@ -23,9 +23,9 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("home/", views.home, name="home"),
     path("login/", views.MyLogin.as_view(template_name="login.html"), name="login"),
-    path("connected/", views.connected, name="connected"),
     path("contact/", views.contact, name="contact"),
     path("mention/", views.mention, name="mention"),
     path("signup/", views.signup, name="signup"),
-    path("products/", views.products, name="products"),
+    path("all_products/", views.search_product, name="all_products"),
+    path("product_infos/", views.product_infos, name="product_infos"),
 ]

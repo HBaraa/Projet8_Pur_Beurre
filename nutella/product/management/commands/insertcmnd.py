@@ -29,8 +29,9 @@ class Command(BaseCommand):
         try:
             for data_dict in products_to_insert:
                 c, created = Categories.objects.update_or_create(
-                    name=data_dict["category"]
+                    category=data_dict["category"]
                 )
+                cat = Categories.objects.get(category=data_dict["category"]).id
                 if data_dict["nutrition_grade_fr"] == "a":
                     nut = 1
                 if data_dict["nutrition_grade_fr"] == "b":
@@ -54,17 +55,13 @@ class Command(BaseCommand):
                 prod, obj = Products.objects.update_or_create(
                     name=data_dict["product_name_fr"],
                     details=data_dict["ingredients_text_fr"],
-                    code=data_dict["code"],
                     link=data_dict["url"],
                     image_large=data_dict["product_image_large"],
                     image_small=data_dict["product_image_small"],
                     prod_store=data_dict["stores"],
                     nutriscore=nut,
+                    category_id=cat,
                 )
-                cat = Categories.objects.filter(name=data_dict["category"]).first()
-                prod.category = cat
-                prod.save()
-
         except Exception as e:
             print(e)
             raise CommandError("Ups une erreur est arrivé,")

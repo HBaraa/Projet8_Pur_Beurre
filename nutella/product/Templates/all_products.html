@@ -1,0 +1,78 @@
+﻿{% extends "base.html" %}
+{% load static%}
+{% block content %}
+<nav class="col-lg-12 navbar navbar-expand" id="mainNav">
+    <div class="container " id="countainerNav">
+        <div class="col-12">
+            <div class="row" id="champ1" >
+                <div class="col-3">
+                    <div class="row">
+                        <img src="../static/images/logo.png" id="logoImg"/>
+                        <p> Pur Beurre </p>
+                    </div>
+                </div>
+                <div class="col-7 mb-2">
+                    <div class="row">
+                        <form role="search" method="get" class="search-form" action="http://localhost/wordpress/">
+                            <input id="question" name="question" type="text" maxlength="50"
+                            class="form-control"
+                            autocomplete="on"
+                            placeholder="Chercher"
+                            required/>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="connected">
+                        <img src="../static/images/login.png" class="login" id="login" >
+                    </div>
+                </div>
+                <div class="col-1">
+                    <img src="../static/images/carotte.png" class="menu"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container" >
+    <div class="searchArea" id="searchArea">
+        <div class="col-lg-8 align-self-baseline">
+            <h2 class="ph" id="ph">Choisissez les meuilleurs produits que vous voulez consommer!</h2>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="col">
+        <div class="row">
+            {% for x in product %}
+                <div class="col-3">
+                    <div class="card" >
+                        <div class="card-body">
+                            <a href="http://127.0.0.1:8000/product_infos/">
+                                <img class=”card-img-top” src={{ x.image_small }} >
+                            </a>
+                            <h6 class="card-title">{{ x.name }}</h6>
+                            <div  class="nutriscore_pic" >
+                                {% if x.nutriscore == '1' %}
+                                    <img src="../static/images/a.png"  alt=”” id="nutriscore_pic">
+                                {% elif x.nutriscore == '2' %}
+                                    <img src="../static/images/b.png"  alt=”” id="nutriscore_pic">
+                                {% elif x.nutriscore == '3' %}
+                                    <img src="../static/images/c.png"  alt=”” id="nutriscore_pic">
+                                {% elif x.nutriscore == '4' %}
+                                    <img src="../static/images/d.png"  alt=”” id="nutriscore_pic">
+                                {% elif x.nutriscore == '5' %}
+                                    <img src="../static/images/e.png"  alt=”” id="nutriscore_pic">
+                                {% else %}
+                                    <h6> Nutriscore non mentionné </h6>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

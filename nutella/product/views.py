@@ -1,4 +1,7 @@
 from django.conf import settings
+from django.http import HttpResponse
+from django.template import loader
+from django.utils.html import escape
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.views import LoginView
@@ -7,15 +10,13 @@ from django.contrib.auth.decorators import login_required
 from .models import CustomUser, CustomUserManager
 from . import forms
 from .forms import SignUpForm
+from .management.commands.insertion import insert_in_data_base
+from .models import Products, Categories
 
 
 # Create your views here.
 def home(request):
     return render(request, "home.html")
-
-
-def connected(request):
-    return render(request, "connected.html")
 
 
 def contact(request):
@@ -64,5 +65,32 @@ def signup(request):
     return render(request, "signup.html", context={"form": form})
 
 
-def products(request):
-    return render(request, "products.html")
+def search_product(request):
+    """
+    Fonction to search one product in data base.
+    """
+    query = request.GET.get("query")
+    # Query Html escape
+    user_product = escape(query)
+    print(user_product)
+    # Product contains the query is and query is not sensitive to case.
+    product = Products.objects.filter(name__icontains=user_product)[:20]
+    if not product.exists():
+        print("OOOUPS I didn't found it")
+    else:
+        prod = product[0]
+        print(prod)
+    print("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
+    # product = product[0]
+    return render(
+        request,
+        "all_products.html",
+        context={
+            "product": product,
+        },
+    )
+
+
+def product_infos(request, product):
+
+    return render(request, "product_infos.html")
