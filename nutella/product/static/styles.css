@@ -58,9 +58,9 @@
 }
 
 .formulaire {
-    background-color: rgba(198, 233, 239, 0.918);
-    top: 8%;
-    right: 23%;
+    background-color: rgba(81, 191, 208, 0.918);
+        top: 0%;
+        left: 0%;
 }
 
 #bouton {
@@ -69,16 +69,18 @@
     left: 30%;
 }
 
-.inscription {
+#insc {
+    height: 700px;
+    width: 900px;
     position: relative;
-    left: 15%;
-    bottom: 14%;
+    left: 10%;
+        top: 0%;
     background-image: url('../static/images/accueilbg.png');
     background-repeat: no-repeat;
-    background-size: 2000px 1100px;
-    background-position: 0px 130px;
-
+    background-size: 900px 700px;
+        background-position: 0px 0px;
 }
+
 
 .connected {
     left: 80%;
@@ -222,4 +224,66 @@
 
 #ph {
     color: #86EBE6;
+}
+
+.icon:before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+#color_text {
+    color: #f1b094;
+}
+
+.wlcmtext {
+    position: relative;
+    color: #d76f42;
+}
+
+.wlcmtext2 {
+    position: relative;
+    left: 45%;
+    color: #e86228;
+}
+
+#headpg {
+    height: 300px;
+    width: 900px;
+    position: relative;
+    left: 23%;
+    top: 0%;
+    background-image: url('../static/images/accueilbg.png');
+    background-repeat: no-repeat;
+    background-size: 900px 300px;
+    background-position: 0px 0px;
+}
+
+.email {
+    position: relative;
+    height: 70px;
+    left: 42%;
+    color: #1fb8b0;
+}
+
+.lien1 {
+    position: relative;
+    left: 30%;
+    height: 70px;
+}
+
+.lien2 {
+    position: relative;
+    left: 35%;
+    height: 70px;
+}
+
+.textadj {
+    position: relative;
+    left: 10%;
+    top: 12%;
+}
+
+.coord {
+    color: #d74f07;
 }

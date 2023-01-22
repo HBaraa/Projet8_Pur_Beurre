@@ -1,0 +1,25 @@
+﻿{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <hr class="divider my-4" />
+    <div class="card text-center">
+        <div class="card-body">
+            <h1 class="wlcmtext"> Youpyyyy!! Le substitut que t'as choisi a été bien enregistré </h1>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="lien1">
+        <a href='{% url "favorite" %}'>
+            <h3> Voir la liste des produits sauvegardés </h3>
+        </a>
+    </div>
+    <div class="lien2">
+        <a href='{% url "home" %}'>
+            <h3> Chercher de nouveaux produits </h3>
+        </a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+﻿{% extends "base.html" %}
+{% load static%}
+{% block content %}
+<div class="center" id="headpg">
+    <h3 class="wlcmtext"> Welcome to your account Page </h3>
+    <h1 class="wlcmtext2">  {{ user.first_name}}   </h1>
+</div>
+<div class="container">
+    <div class="center" >
+        <h2 class="email"> {{ user.email}} </h3>
+    </div>
+    <div class="lien1">
+        <a href='{% url "favorite" %}'>
+            <h3> Voir la liste des substitutes sauvegardés </h3>
+        </a>
+    </div>
+    <div class="lien2">
+        <a href='{% url "home" %}'>
+            <h3> Chercher de nouveaux produits </h3>
+        </a>
+    </div>
+</div>
+{% endblock %}

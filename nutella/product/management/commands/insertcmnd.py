@@ -2,7 +2,7 @@
 import json
 from django.core.management.base import BaseCommand, CommandError
 
-from nutella.product.models import Products, Categories
+from nutella.product.models import Products, Categories, Favorite
 from .found_prod import GetDatas
 from .filter import filter_file
 
@@ -26,8 +26,8 @@ class Command(BaseCommand):
 
         print("Insértion de tous les produits dans la base de données!")
         cat_list = []
-        try:
-            for data_dict in products_to_insert:
+        for data_dict in products_to_insert:
+            try:
                 c, created = Categories.objects.update_or_create(
                     category=data_dict["category"]
                 )
@@ -62,9 +62,9 @@ class Command(BaseCommand):
                     nutriscore=nut,
                     category_id=cat,
                 )
-        except Exception as e:
-            print(e)
-            raise CommandError("Ups une erreur est arrivé,")
+            except Exception as e:
+                e
+                continue
 
         self.stdout.write(
             self.style.SUCCESS(

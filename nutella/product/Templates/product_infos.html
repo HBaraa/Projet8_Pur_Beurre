@@ -1,4 +1,86 @@
-﻿{% extends 'base.html' %}
+﻿{% extends "base.html" %}
+{% load static %}
 {% block content %}
-<h1> Product's informations</h1>
+
+<div class="container">
+    <hr class="divider my-4" />
+    <div class="card text-center">
+        <div class="card-body">
+            <h4> Le produit que vous avez choisi est {{ element.name }} </h4>
+            <h4 style="color: #f1b099;"> {{ element.name }} </h4>
+            <img class=”card-img-top” src={{ element.image_small }} >
+            <div  class="nutriscore_pic" >
+                {% if element.nutriscore == '1' %}
+                    <img src="{% static 'images/a.png' %}"  alt=””>
+                {% elif element.nutriscore == '2' %}
+                    <img src="{% static 'images/b.png' %}"  alt=””>
+                {% elif element.nutriscore == '3' %}
+                    <img src="{% static 'images/c.png' %}"  alt=””>
+                {% elif element.nutriscore == '4' %}
+                    <img src="{% static 'images/d.png' %}"  alt=””>
+                {% elif element.nutriscore == '5' %}
+                    <img src="{% static 'images/e.png' %}"  alt=””>
+                {% else %}
+                    <h6> OUUPS Pardon!! Nutriscore n'est pas mentionné </h6>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="col">
+        <div class="row">
+            {% if element.nutriscore == 1 %}
+                <h5> Vous avez fait le meuiller choix </h5>
+                {% for x in substitutes %}
+                    {% if x.nutriscore == 1 %}
+                        <div class="col-4 md-1" style="border:1px solid black">
+                            <div class="card"  >
+                                <div class="card-body" >
+                                    <img class=”card-img-top” src={{ x.image_small }} >
+                                    <h6 class="card-title">{{ x.name }}</h6>
+                                <div  class="nutriscore_pic" >
+                                    <img src="{% static 'images/a.png' %}"  alt=””>
+                                </div>
+                            </div>
+                        <div>
+                    {% endif %}
+                {% endfor%}
+            {% endif %}
+            {% if element.nutriscore != 1 %}
+                {% for x in substitutes %}
+                    {%if x.nutriscore < element.nutriscore %}
+                        <div class="col-4 md-1" style="border:1px solid black">
+                            <div class="card"  >
+                                <div class="card-body" >
+                                    <img class="card-img-top" src={{ x.image_small }} style="width:200px; heigh:200px">
+                                    <h6 class="card-title">{{ x.name }}</h6>
+                                    <div  class="nutriscore_pic" >
+                                        {% if x.nutriscore == '1' %}
+                                            <img src="{% static 'images/a.png' %}"  alt=””>
+                                        {% elif x.nutriscore == '2' %}
+                                            <img src="{% static 'images/b.png' %}"  alt=””>
+                                        {% elif x.nutriscore == '3' %}
+                                            <img src="{% static 'images/c.png' %}"  alt=””>
+                                        {% elif x.nutriscore == '4' %}
+                                            <img src="{% static 'images/d.png' %}"  alt=””>
+                                        {% elif x.nutriscore == '5' %}
+                                            <img src="{% static 'images/e.png' %}"  alt=””>
+                                        {% else %}
+                                            <h6> Nutriscore non mentionné </h6>
+                                        {% endif %}
+                                        <form action="{% url 'save_favorite' x.id element.id %}" method="post">
+                                            {% csrf_token %}
+                                            <button class="btn btn-primary btn-xl js-scroll-trigger" type="submit" name="submit" >Sauvegarder </button>
+                                            </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
 {% endblock content %}

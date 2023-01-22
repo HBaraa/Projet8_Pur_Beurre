@@ -1,0 +1,35 @@
+﻿{% extends "base.html" %}
+{% load static%}
+{% block content %}
+<div class='container text-center'>
+    <div class="row">
+        <div class="col">
+            <h4 id="color_text"> Products </h4>
+            <h4 id="color_text"> {{ user.user_name }} </h4>
+        </div>
+        <div class="col">
+            <h3 id="color_text"> Substitutes healthier </h3>
+        </div>
+    </div>
+    {% for favorite in favorites %}
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h6> {{ favorite.product.name }} </h6>
+                        <img class=”card-img-top” src={{ favorite.product.image_small }} >
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h6> {{ favorite.substitute.name }} </h6>
+                        <img class=”card-img-top” src={{ favorite.substitute.image_small }} >
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
