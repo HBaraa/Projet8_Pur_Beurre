@@ -80,13 +80,13 @@
         <div class="row text-center">
                 <div class="col-6" style="position:relative; left:8%">
                     <div class="row">
-                        <a class="nav-link" href= "http://127.0.0.1:8000/mention/" >Mention légale</a>
+                        <a class="nav-link" href="{% url 'mention' %}" >Mention légale</a>
                     </div>
                 </div>
                 <div class="col-6" style="position:relative; left:26%">
                     <div class="row">
                         <a class="nav-link" id="startpresent" style="visibility: visible;"
-                        href="#contact">contact</a>
+                        href="{% url 'contact' %}">contact</a>
                     </div>
                 </div>
         </div>
