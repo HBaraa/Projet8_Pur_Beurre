@@ -40,7 +40,7 @@
     position: relative;
     left: 23%;
     top: 0%;
-    background-image: url('../static/images/accueilbg.png');
+    background-image: url('../static/images/bghome.png');
     background-repeat: no-repeat;
     background-size: 900px 700px;
     background-position: 0px 0px;
@@ -75,7 +75,7 @@
     position: relative;
     left: 10%;
         top: 0%;
-    background-image: url('../static/images/accueilbg.png');
+    background-image: url('../static/images/bghome.png');
     background-repeat: no-repeat;
     background-size: 900px 700px;
         background-position: 0px 0px;
@@ -217,7 +217,7 @@
 
 #searchArea {
     position: relative;
-    background-image: url('../static/images/accueilbg.png');
+    background-image: url('../static/images/bghome.png');
     background-repeat: no-repeat;
     background-size: 900px 700px;
 }
@@ -253,7 +253,7 @@
     position: relative;
     left: 23%;
     top: 0%;
-    background-image: url('../static/images/accueilbg.png');
+    background-image: url('../static/images/bghome.png');
     background-repeat: no-repeat;
     background-size: 900px 300px;
     background-position: 0px 0px;

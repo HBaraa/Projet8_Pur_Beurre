@@ -5,7 +5,6 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.decorators import login_required
 from .forms import SignUpForm
-from .management.commands.insertion import insert_in_data_base
 from .models import Products, Favorite, CustomUser
 from django.contrib.auth import views as auth_views
 
@@ -24,12 +23,12 @@ def contact(request):
     return render(request, "contact.html")
 
 
+def history(request):
+    return render(request, "history.html")
+
+
 def mention(request):
     return render(request, "mentionleg.html")
-
-
-def connect(request):
-    return render(request, "connect.html")
 
 
 class MyLoginView(auth_views.LoginView):

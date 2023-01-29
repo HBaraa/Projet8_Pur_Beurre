@@ -1,0 +1,26 @@
+[
+  {
+    "id": "6",
+    "category": "Plats préparés"
+  },
+  {
+    "id": "2",
+    "category": "Céréales et dérivés"
+  },
+  {
+    "id": "4",
+    "category": "Produits laitiers"
+  },
+  {
+    "id": "3",
+    "category": "Boissons"
+  },
+  {
+    "id": "1",
+    "category": "Snacks"
+  },
+  {
+    "id": "5",
+    "category": "Pains"
+  }
+]

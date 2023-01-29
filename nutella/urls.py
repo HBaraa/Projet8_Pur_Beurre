@@ -32,7 +32,8 @@ urlpatterns = [
     path("signup/", views.signup, name="signup"),
     path("all_products/", views.search_product, name="all_products"),
     path("product_infos/<int:id>/", views.product_infos, name="product_infos"),
-    path("save_favorite/<int:id> <int:scndid>/", views.save_favorite, name="save_favorite"),
+    path("save_favorite/<int:id> <int:scndid>/", views.save_favorite, name="save_favorite"),    # noqa
     path("favorite/", views.favorite, name="favorite"),
-    path('logout/', LogoutView.as_view(next_page='login'), name='logout'),
+    path("history/", views.history, name="history"),
+
 ]
