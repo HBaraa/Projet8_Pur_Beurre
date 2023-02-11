@@ -35,5 +35,6 @@ urlpatterns = [
     path("save_favorite/<int:id> <int:scndid>/", views.save_favorite, name="save_favorite"),    # noqa
     path("favorite/", views.favorite, name="favorite"),
     path("history/", views.history, name="history"),
+    path("logout/", views.logout_view, name="logout")
 
 ]

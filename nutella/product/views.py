@@ -4,6 +4,8 @@ from django.db.models import Q
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.decorators import login_required
+from PIL import Image, ImageDraw
+import aspose.words as aw
 from .forms import SignUpForm
 from .models import Products, Favorite, CustomUser
 from django.contrib.auth import views as auth_views
@@ -102,6 +104,11 @@ def product_infos(request, id):
     product = Products.objects.get(id=id)
     print("*********************************************")
     print(type(product))
+    # product_image = product.image_large
+    print("Youuuuuuupyyyyyy........................")
+    # print(product_image)
+    # im = Image.open(product_image)
+    # Image.fromarray(product_image ).save(product_image, "png")
     print("TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT")
     nutriscore = product.nutriscore
     substitutes = (
@@ -162,14 +169,14 @@ def save_favorite(request, id, scndid):
 
 @login_required
 def favorite(request):
-    user = request.user
-    print(user)
-    user_id = user.id
-    print(user.id)
-    # user = CustomUser.objects.get(id=user_id)
-    favorites = Favorite.objects.filter(user=user_id)
-    context = {"user": user, "favorites": favorites}
-    return render(request, "favorite.html", context)
+        user = request.user
+        print(user)
+        user_id = user.id
+        print(user.id)
+        # user = CustomUser.objects.get(id=user_id)
+        favorites = Favorite.objects.filter(user=user_id)
+        context = {"user": user, "favorites": favorites}
+        return render(request, "favorite.html", context)
 
 
 @login_required

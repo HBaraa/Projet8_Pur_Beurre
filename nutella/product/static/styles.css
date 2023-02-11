@@ -78,7 +78,7 @@
     background-image: url('../static/images/bghome.png');
     background-repeat: no-repeat;
     background-size: 900px 700px;
-        background-position: 0px 0px;
+    background-position: 0px 0px;
 }
 
 
@@ -286,4 +286,15 @@
 
 .coord {
     color: #d74f07;
+}
+
+#masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 4.5rem);
+    background-image: "{{% url element.image_large %}}";
+    background-size: 900px 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
 }

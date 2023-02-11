@@ -2,13 +2,12 @@
 {% load static %}
 {% block content %}
 
-<div class="container">
+<div class="masthead" id="masthead">
     <hr class="divider my-4" />
     <div class="card text-center">
-        <div class="card-body">
+        <div class="card-body mastbg">
             <h4> Le produit que vous avez choisi est {{ element.name }} </h4>
             <h4 style="color: #f1b099;"> {{ element.name }} </h4>
-            <img class=”card-img-top” src={{ element.image_small }} >
             <div  class="nutriscore_pic" >
                 {% if element.nutriscore == '1' %}
                     <img src="{% static 'images/a.png' %}"  alt=””>

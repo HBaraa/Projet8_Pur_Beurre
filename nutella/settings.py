@@ -18,7 +18,7 @@ from django.conf import settings
 settings.configure(DEBUG=True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # django.setup()
 # Quick-start development settings - unsuitable for production
@@ -139,6 +139,7 @@ STATICFILES_DIRS = ["nutella/product/static/"]
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = '/home/'
 AUTH_USER_MODEL = "product.CustomUser"
 
 AUTHENTICATION_BACKENDS = ["django.contrib.auth.backends.ModelBackend"]
