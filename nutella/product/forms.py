@@ -8,8 +8,6 @@ username_validator = UnicodeUsernameValidator()
 
 
 class SignUpForm(UserCreationForm):
-    def __init__(self, *args, **kwargs):
-        super(SignUpForm, self).__init__(*args, **kwargs)
 
     class Meta:
         model = CustomUser

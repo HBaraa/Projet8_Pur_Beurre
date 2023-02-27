@@ -24,7 +24,6 @@ from .product import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/login/", views.MyLoginView.as_view(), name="login"),
-    # path("accounts/login/", views.login_view, name="login"),
     path("home/", views.home, name="home"),
     path("moncompte/", views.moncompte, name="moncompte"),
     path("contact/", views.contact, name="contact"),
@@ -32,9 +31,9 @@ urlpatterns = [
     path("signup/", views.signup, name="signup"),
     path("all_products/", views.search_product, name="all_products"),
     path("product_infos/<int:id>/", views.product_infos, name="product_infos"),
-    path("save_favorite/<int:id> <int:scndid>/", views.save_favorite, name="save_favorite"),    # noqa
+    path("save_favorite/<int:id> <int:scndid>/", views.save_favorite, name="save_favorite"),      # noqa
     path("favorite/", views.favorite, name="favorite"),
     path("history/", views.history, name="history"),
-    path("logout/", views.logout_view, name="logout")
-
+    path("logout/", views.logout_view, name="logout"),
+    path("details/<int:id>", views.display_details, name="details"),
 ]

@@ -36,6 +36,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+OPENFOODFACTS_PAGE_SIZE = os.environ.get("OPENFOODFACTS_PAGE_SIZE", 1000)
 
 # Application definition
 
@@ -139,8 +140,9 @@ STATICFILES_DIRS = ["nutella/product/static/"]
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_REDIRECT_URL = "home"
-LOGOUT_REDIRECT_URL = '/home/'
+LOGOUT_REDIRECT_URL = "/home/"
 AUTH_USER_MODEL = "product.CustomUser"
+
 
 AUTHENTICATION_BACKENDS = ["django.contrib.auth.backends.ModelBackend"]
 FIXTURE_DIRS = (os.path.join(BASE_DIR, "fixtures"),)

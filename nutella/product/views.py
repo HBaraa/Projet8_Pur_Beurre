@@ -1,23 +1,15 @@
-﻿from django.utils.html import escape
-from django.urls import reverse
+﻿from django.urls import reverse
 from django.db.models import Q
 from django.shortcuts import render, redirect
-from django.contrib.auth import logout, login, authenticate
+from django.contrib.auth import logout, login
 from django.contrib.auth.decorators import login_required
-from PIL import Image, ImageDraw
-import aspose.words as aw
 from .forms import SignUpForm
-from .models import Products, Favorite, CustomUser
 from django.contrib.auth import views as auth_views
+from .logic_file import sign_up, found_products, search_for_substitute, saving_substitute, display_favorite
+from .models import Products
 
 
 def home(request):
-    user = request.user
-    if user.is_authenticated:
-        print("Déjà connecté")
-        print(user.email)
-    else:
-        print("Please Connect")
     return render(request, "home.html")
 
 
@@ -42,43 +34,16 @@ def signup(request):
     if request.method == "POST":
         form = SignUpForm(request.POST)
         if form.is_valid():
-            email = form.cleaned_data["email"]
-            first_name = form.cleaned_data["first_name"]
-            second_name = form.cleaned_data["second_name"]
-            password = form.cleaned_data["password2"]
-            user = authenticate(request, username=email, password=password)
-            if user is None:
-                user = CustomUser.objects.create_user(
-                    email=email,
-                    first_name=first_name,
-                    second_name=second_name,
-                    password=password,
-                )
-                login(request, user)
-                return redirect(reverse("home"))
-            else:
-                login(request, user)
-                return redirect(reverse("login"))
+            user = sign_up(form, request)
+            login(request, user)
+            return redirect(reverse("home"))
+        else:
+            user = sign_up(form, request)
+            login(request, user)
+            return redirect(reverse("login"))
     else:
         form = SignUpForm()
     return render(request, "signup.html", context={"form": form})
-
-
-def login_view(request):
-    if request.method == "POST":
-        username = request.POST["username"]
-        password = request.POST["password"]
-        print(username, "****", password)
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            # Redirect to a success page.
-            return redirect("home")
-        else:
-            print("non connected")
-            return redirect("login")
-    else:
-        return render(request, "accounts/login.html")
 
 
 def search_product(request):
@@ -86,11 +51,7 @@ def search_product(request):
     Fonction to search one product in data base.
     """
     query = request.GET.get("query")
-    # Query Html escape
-    user_product = escape(query)
-    print(user_product)
-    # Product contains the query is and query is not sensitive to case.
-    products = Products.objects.filter(name__icontains=user_product)[:50]
+    products = found_products(query)
     return render(
         request,
         "all_products.html",
@@ -102,21 +63,7 @@ def search_product(request):
 
 def product_infos(request, id):
     product = Products.objects.get(id=id)
-    print("*********************************************")
-    print(type(product))
-    # product_image = product.image_large
-    print("Youuuuuuupyyyyyy........................")
-    # print(product_image)
-    # im = Image.open(product_image)
-    # Image.fromarray(product_image ).save(product_image, "png")
-    print("TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT")
-    nutriscore = product.nutriscore
-    substitutes = (
-        Products.objects.filter(category_id=product.category)
-        .filter(Q(nutriscore__lte=nutriscore))
-        .exclude(name=product.name)
-        .order_by("nutriscore")
-    )[:15]
+    product, substitutes = search_for_substitute(product)
     context = {
         "element": product,
         "substitutes": substitutes,
@@ -126,57 +73,23 @@ def product_infos(request, id):
 
 @login_required
 def save_favorite(request, id, scndid):
-    if request.method == "POST":  # do something with interview_HTML button is clicked
-        if request.user.is_authenticated:
-            print("=========================================================")
-            product = Products.objects.get(id=scndid)
-            substitute = Products.objects.get(id=id)
-            print(substitute.id)
-            print("22222222222222222222222222222222222222222222222222222222222")
-            user_identif = request.user
-            print(user_identif)
-            print(user_identif.id, product.id, substitute.id)
-            favor = Favorite(
-                user=request.user,
-                product_id=product.id,
-                substitute_id=substitute.id,
-            )
-            favor.save()
-            print("YOUUUUUUUUUUUUUUUUUUUUPYYYYYYYYYYYY!!!!!!!!!!!!!!!!!!!!!!!")
-            print(product)
-            print(id)
-            print(product.id)
-        else:
-            print("connexion deniyed////////////////////////////////")
+    saving_substitute(request, id, scndid)
     return render(request, "saved_favorite.html")
 
 
-# def save_favorite(request):
-#    if request.method == "POST":
-#        user = request.user
-#        user_id = user.id
-#        custom = CustomUser.objects.filter(user=user_id)
-#        product = request.POST.get("element")
-#        substitute = request.POST.get("x")
-#        favor = Favorite(
-#            user_id=custom,
-#            product_id=product,
-#          substitute_id=substitute,
-#        )
-#        favor.save()
-#    return redirect(reverse("product_infos.html"))
+def display_details(request, id):
+    product = Products.objects.get(id=id)
+    context = {
+        "product": product,
+    }
+    return render(request, "details.html", context)
 
 
 @login_required
 def favorite(request):
-        user = request.user
-        print(user)
-        user_id = user.id
-        print(user.id)
-        # user = CustomUser.objects.get(id=user_id)
-        favorites = Favorite.objects.filter(user=user_id)
-        context = {"user": user, "favorites": favorites}
-        return render(request, "favorite.html", context)
+    user = request.user
+    context = display_favorite(user)
+    return render(request, "favorite.html", context)
 
 
 @login_required
