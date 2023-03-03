@@ -9,7 +9,6 @@ from .filter import filter_file
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-
         help = "Insert all products an relations in the models tables."
 
         print("Début de travail!...")
@@ -43,15 +42,6 @@ class Command(BaseCommand):
                 if data_dict["nutrition_grade_fr"] == "e":
                     nut = 5
 
-                # p = Product(
-                #    name=data_dict["product_name_fr"],
-                #    details=data_dict["ingredients_text_fr"],
-                #    link=data_dict["url"],
-                #    image_large=data_dict["product_image_large"],
-                #    image_small=data_dict["product_image_small"],
-                #    prod_store=data_dict["stores"],
-                #    nutriscore=nut,
-                # )
                 prod, obj = Products.objects.update_or_create(
                     name=data_dict["product_name_fr"],
                     details=data_dict["ingredients_text_fr"],
@@ -71,5 +61,3 @@ class Command(BaseCommand):
                 "Les produits sont, à present, sauvegardées dans la base de données!"
             )
         )
-
-

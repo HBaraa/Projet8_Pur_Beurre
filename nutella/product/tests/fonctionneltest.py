@@ -21,7 +21,7 @@ class TestCesiSearch(unittest.TestCase):
         self.driver.find_element("id", "searchForm")
         self.driver.find_element("id", "searchForm").submit()
         print(self.driver.current_url)
-        self.assertTrue(self.driver.title == 'Pur Beurre for Nutella lovers')
+        self.assertTrue(self.driver.title == "Pur Beurre for Nutella lovers")
         # self.assertTrue(self.driver.current_url == BASE_URL + 'all_products')
 
     def tearDown(self):

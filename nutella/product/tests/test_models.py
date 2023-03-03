@@ -3,11 +3,8 @@ from nutella.product.models import Categories, Products
 
 
 class CategorysTest(TestCase):
-
     def setUp(self):
-        cat = Categories.objects.create(     # noqa
-            category="test"
-        )
+        cat = Categories.objects.create(category="test")  # noqa
 
     def test_user(self):
         cat = Categories.objects.get(category="test")
@@ -15,11 +12,8 @@ class CategorysTest(TestCase):
 
 
 class UserCreationTest(TestCase):
-
     def setUp(self):
-        cat = Categories.objects.create(
-            category="test1"
-        )
+        cat = Categories.objects.create(category="test1")
         p = Products(
             name="Product",
             details="Ingredients",
@@ -28,7 +22,7 @@ class UserCreationTest(TestCase):
             image_small="Product_img_s",
             prod_store="Stores",
             nutriscore="1",
-            )
+        )
 
         cat = Categories.objects.get(category="test1")
         p.category = cat

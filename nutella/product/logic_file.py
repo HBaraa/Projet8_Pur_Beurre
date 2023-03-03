@@ -17,11 +17,11 @@ def sign_up(form, request):
     user = authenticate(request, username=email, password=password)
     if user is None:
         user = CustomUser.objects.create_user(
-        email=email,
-        first_name=first_name,
-        second_name=second_name,
-        password=password,
-    )
+            email=email,
+            first_name=first_name,
+            second_name=second_name,
+            password=password,
+        )
     return user
 
 

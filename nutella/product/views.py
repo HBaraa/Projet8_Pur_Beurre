@@ -5,7 +5,13 @@ from django.contrib.auth import logout, login
 from django.contrib.auth.decorators import login_required
 from .forms import SignUpForm
 from django.contrib.auth import views as auth_views
-from .logic_file import sign_up, found_products, search_for_substitute, saving_substitute, display_favorite
+from .logic_file import (
+    sign_up,
+    found_products,
+    search_for_substitute,
+    saving_substitute,
+    display_favorite,
+)
 from .models import Products
 
 

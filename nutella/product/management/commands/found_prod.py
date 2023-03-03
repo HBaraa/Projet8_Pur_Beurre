@@ -2,8 +2,7 @@
 from django.conf import settings
 import json
 import pprint
-from nutella.product.models import Products
-from nutella.product.management.commands.filter import (
+from filter import (
     filter_file,
     eliminate_duplicated_products,
 )

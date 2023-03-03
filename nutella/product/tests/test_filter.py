@@ -9,27 +9,24 @@ class DownloadProducts(TestCase):
         with open("fixtures/data_new_fonctionality.json", encoding="utf-8-sig") as f:
             products_data = json.load(f)
 
-        with open("fixtures/data_new_fonctionality_cleaned_data.json", encoding="utf-8-sig") as f:
+        with open(
+            "fixtures/data_new_fonctionality_cleaned_data.json", encoding="utf-8-sig"
+        ) as f:
             cleaned_products = json.load(f)
 
         assert filter_file(products_data, "Produits laitiers") == cleaned_products
 
     def test_call_openfoodfacts(self):
-        with open("fixtures/products_data1.json", encoding="utf-8-sig") as products_data:
+        with open(
+            "fixtures/products_data1.json", encoding="utf-8-sig"
+        ) as products_data:
             results_test = json.load(products_data)
         assert GetDatas.all_products == results_test
-        with open('fixtures/products_data_eliminate_duplicated.json', encoding="utf-8-sig") as products_data_eliminated_products:
+        with open(
+            "fixtures/products_data_eliminate_duplicated.json", encoding="utf-8-sig"
+        ) as products_data_eliminated_products:
             results_test = json.load(products_data_eliminated_products)
         assert GetDatas.products_to_inser == results_test
-
-
-
-
-
-
-
-
-
 
 
 # fake_results = {
@@ -57,4 +54,3 @@ class DownloadProducts(TestCase):
 #        mock_api.message = message
 #        assert (fake_results == mock_api.message)
 #        assert ("Farine de _blé_, _beurre_ 29%, sucre, _œufs_, sel marin gris, dorure : poudre de _lait_ écrémé." == mock_api.message['details'])
-
