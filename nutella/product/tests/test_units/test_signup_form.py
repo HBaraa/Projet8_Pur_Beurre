@@ -7,8 +7,7 @@ class TestSignUpForm(TestCase):
     def test_custom_user_creation_form_email_field_label(self):
         form = SignUpForm()
         self.assertTrue(
-            form.fields["email"].label == None
-            or form.fields["email"].label == "Email"
+            form.fields["email"].label == None or form.fields["email"].label == "Email"
         )
 
     def test_custom_user_creation_form_first_name_field_label(self):
@@ -88,7 +87,7 @@ class TestSignUpForm(TestCase):
         self.assertTrue(form.is_valid())
 
     def test_custom_existing_user(self):
-        customer1 = CustomUser.objects.create_user(       # noqa
+        customer1 = CustomUser.objects.create_user(  # noqa
             email="colette@purbeurre.com",
             first_name="colette",
             second_name="purbeurre",
@@ -105,4 +104,3 @@ class TestSignUpForm(TestCase):
         form = SignUpForm(data=customer2)
         print(form.errors)
         self.assertTrue(form.error_messages)
-

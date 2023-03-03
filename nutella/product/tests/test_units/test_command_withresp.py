@@ -1,21 +1,17 @@
 ﻿import requests
 import responses
-import unittest
 from django.core.management import call_command
 from django.conf import settings
-from responses import matchers
-from nutella.product.models import Categories, Products
 import pytest
 import pprint
-from io import StringIO
 
 
 def get_items(self):
-    response = requests.get(f"https://fr.openfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=C%C3%A9r%C3%A9ales%20et%20d%C3%A9riv%C3%A9s&tagtype_1=categories&tag_contains_1=contains&tag_1=C%C3%A9r%C3%A9ales%20et%20d%C3%A9riv%C3%A9s&sort_by=unique_scans_n&page_size=1000&axis_x=energy&axis_y=products_n&action=process&page=2&json=1")
+    response = requests.get(
+        f"https://fr.openfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=C%C3%A9r%C3%A9ales%20et%20d%C3%A9riv%C3%A9s&tagtype_1=categories&tag_contains_1=contains&tag_1=C%C3%A9r%C3%A9ales%20et%20d%C3%A9riv%C3%A9s&sort_by=unique_scans_n&page_size=1000&axis_x=energy&axis_y=products_n&action=process&page=2&json=1"
+    )
     if response.status_code == 200:
-        print(".........................................................")
-        pprint(response.json()['value'])
-        print("YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY")
+        pprint(response.json()["value"])
         return response.json()
     else:
         return None
@@ -33,6 +29,7 @@ def tests_serch_openfood_failed():
     )
     response = get_items(url)
     assert response is None
+
 
 # @pytest.mark.django_db
 # @responses.activate
