@@ -1,0 +1,33 @@
+﻿[
+    {
+        "product_name_fr": "Lait demi-\u00e9cr\u00e9m\u00e9 avec Vitamine D",
+        "stores": [
+            "bi1"
+        ],
+        "product": "3252210390014",
+        "ingredients_text_fr": "Lait demi-\u00e9cr\u00e9m\u00e9, vitamine D",
+        "category": "Produits laitiers",
+        "nutrition_grade_fr": "b",
+        "product_image_large": "https://static.openfoodfacts.org/images/products/325/221/039/0014/front_fr.142.400.jpg",
+        "product_image_small": "https://static.openfoodfacts.org/images/products/325/221/039/0014/front_fr.142.200.jpg",
+        "product_image_nutrition_large": "https://static.openfoodfacts.org/images/products/325/221/039/0014/nutrition_fr.136.400.jpg",
+        "product_image_nutrition_small": "https://static.openfoodfacts.org/images/products/325/221/039/0014/nutrition_fr.136.200.jpg",
+        "url": "https://fr.openfoodfacts.org/produit/3252210390014/lait-demi-ecreme-avec-vitamine-d-lactel"
+    },
+    {
+        "ingredients_text_fr": "Lait \u00e0 1,2% de M,G, st\u00e9rilis\u00e9 UHT sans lactose (,lt,0,19/100 ml) et enrichi en vitamine D, Ingr\u00e9dien ts:lait 1,2% de mati\u00e8re grasse (origine France), lactase, vitamine D, lalouro nutriti nnlla",
+        "category": "Produits laitiers",
+        "nutrition_grade_fr": "b",
+        "product_image_large": "https://static.openfoodfacts.org/images/products/342/827/398/0046/front_fr.52.400.jpg",
+        "product_image_small": "https://static.openfoodfacts.org/images/products/342/827/398/0046/front_fr.52.200.jpg",
+        "product_image_nutrition_large": "https://static.openfoodfacts.org/images/products/342/827/398/0046/nutrition_fr.96.400.jpg",
+        "product_image_nutrition_small": "https://static.openfoodfacts.org/images/products/342/827/398/0046/nutrition_fr.96.200.jpg",
+        "url": "https://fr.openfoodfacts.org/produit/3428273980046/lait-matin-leger-demi-ecreme-lactel",
+        "product_name_fr": "Lait Matin L\u00e9ger Demi-\u00c9cr\u00e9m\u00e9",
+        "stores": [
+            "auchan",
+            "banque-alimentaire"
+        ],
+        "product": "3428273980046"
+    }
+]

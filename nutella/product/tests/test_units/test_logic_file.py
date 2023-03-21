@@ -1,9 +1,11 @@
 ﻿from django.test import TestCase
+import pytest
 from nutella.product.models import Products, Categories, Favorite, CustomUser
 from django.db.models import Q
 
 
 class LogicTest(TestCase):
+    @pytest.mark.django_db
     def test_create_account(self):
         user = CustomUser.objects.create(
             email="colette@purbeurre.com",
@@ -13,6 +15,7 @@ class LogicTest(TestCase):
         )
         self.assertIsInstance(user, CustomUser)
 
+    @pytest.mark.django_db
     def test_found_product(self):
         categories = Categories.objects.create(id=1, category="Snacks")
         prod_1 = Products.objects.create(
@@ -51,6 +54,7 @@ class LogicTest(TestCase):
         element = Products.objects.filter(name__icontains="Pain")[:3]
         self.assertEqual(len(element), 3)
 
+    @pytest.mark.django_db
     def test_search_for_substitute(self):
         categories = Categories.objects.create(id=1, category="Snacks")
         prod_1 = Products.objects.create(
@@ -94,6 +98,7 @@ class LogicTest(TestCase):
         )[:2]
         self.assertEqual((substitutes[0], substitutes[1]), (prod_2, prod_3))
 
+    @pytest.mark.django_db
     def test_save_substitute(self):
         categories = Categories.objects.create(id=1, category="Snacks")  # noqa
         product_1 = Products.objects.create(
@@ -134,3 +139,48 @@ class LogicTest(TestCase):
         )
         favor = Favorite.objects.filter(user=2)
         self.assertIsInstance(substitute, Favorite)
+
+    @pytest.mark.django_db
+    def test_save_substitute(self):
+        user_1 = CustomUser.objects.create(
+            id=1,
+            email="colette@purbeurre.com",
+            first_name="colette",
+            second_name="purbeurre",
+            password="kjhkhfkh5",
+        )
+        categories = Categories.objects.create(id=1, category="Snacks")  # noqa
+        product_1 = Products.objects.create(
+            id=32,
+            name="Pains au lait aux œufs frais",
+            details="Farine de _blé_ 56 %, _lait_ écrémé reconstitué 13 %, sucre, œufs_ frais 8,5 %, eau, huile de colza, beurre concentré (_lait_), levure, sel, émulsifiant : mono - et diglycérides d'acides gras et stéaroyl-2-lacrylate de sodium, épaississant : carboxyméthyl-cellulose, arôme (contient alcool), conservateur : propionate de calcium, colorant : caroténoïdes, levure désactivée, anti-oxydant : acide ascorbique",  # noqa
+            link="https://fr.openfoodfacts.org/produit/3250390440338/pains-au-lait-aux-oeufs-frais-chabrior",  # noqa
+            image_large="https://images.openfoodfacts.org/images/products/325/039/044/0338/front_fr.44.400.jpg",  # noqa
+            image_small="https://images.openfoodfacts.org/images/products/325/039/044/0338/front_fr.44.200.jpg",  # noqa
+            prod_store="['intermarche']",
+            nutriscore="4",
+            category_id="1",
+        )
+        product_2 = Products.objects.create(
+            id=57,
+            name="Tartines craquantes au blé complet",
+            details="Farine de BLÉ complet 55%, farine de BLÉ, farine de MALT de BLÉ, huile de tournesol, sucre, LACTOSÉRUM en poudre, sel. Traces éventuelles de soja.",
+            link="https://fr.openfoodfacts.org/produit/3256225722181/tartines-craquantes-au-ble-complet-u",
+            image_large="https://images.openfoodfacts.org/images/products/325/622/572/2181/front_fr.60.400.jpg",
+            image_small="https://images.openfoodfacts.org/images/products/325/622/572/2181/front_fr.60.200.jpg",
+            prod_store="['magasins-u']",
+            nutriscore="1",
+            category_id="1",
+        )
+        Favorite.objects.create(
+            product_id=32,
+            substitute_id=57,
+            user_id=1,
+        )
+        substitutes = Favorite.objects.filter(user=1)
+        self.assertEqual(substitutes.count(), 1)
+        substitute_identif = substitutes[0].substitute_id
+        self.assertEqual(substitute_identif, 57)
+        substitute_identif = substitutes[0].product_id
+        self.assertEqual(substitute_identif, 32)
+

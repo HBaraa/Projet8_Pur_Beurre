@@ -1,0 +1,390 @@
+﻿{
+    "products": [
+        {
+            "product": "8000500329474",
+            "category": "Céréales et dérivés",
+            "ingredients_text_fr": "Farines 29,8% (BLE 10%, BLE complet (épeautre) 8,4%, BLE complet 6,1%, BLE dur complet 1,2%, riz 0,9%, SEIGLE 0,9%, flocons d'AVOINE 0,8%, maïs 0,8%, sarrasin 0,7%), chocolat noir 15% (sucre, pâte de cacao, beurre de cacao, dextrose, émulsifiants (lécithines [SOJA]), sucre de canne, huile de palme, flocons de maïs 8,5% (farine de maïs, sucre, extrait de malt d'ORGE, sel), amidon de BLE, BEURRE concentré, LAIT écrémé en poudre 3%, flocons de riz caramélisés 2,5% (farine de riz, sucre), poudres à lever (carbonate acide d'ammonium, carbonate acide de sodium), extrait de malt en poudre (ORGE, maïs), vanilline, sel, émulsifiants (lécithines [SOJA]).\r\nPeut contenir AMANDES, NOISETTES, NOIX, NOIX DE CAJOU, NOIX DE PECAN, NOIX DU BRESIL, PISTACHES, NOIX DE MACADAMIA, œufs",
+            "nutrition_grade_fr": "e",
+            "product_name_fr": "Biscuits Kinder CereAlé chocolat noir 2x6 - 204g",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/800/050/032/9474/front_fr.121.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/800/050/032/9474/front_fr.121.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/800/050/032/9474/nutrition_fr.106.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/800/050/032/9474/nutrition_fr.106.200.jpg",
+            "stores": [
+                "e-leclerc",
+                "auchan",
+                "carrefour",
+                "carrefour-market"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/8000500329474/biscuits-kinder-cereale-chocolat-noir-2x6-204g"
+        },
+        {
+            "product": "5010477356239",
+            "category": "Céréales et dérivés",
+            "ingredients_text_fr": "Céréales complètes (78%) (flocons d'avoine*, pétales de blé grillé*, flocons de blé*), pépites de chocolat noir (13%) (cacao : 48.5% minimum (masse de cacao*, sucre*, émulsifiant (lécithine de soja*))), graines de tournesol* (6%), épeautre (blé) soufflé* (3%).",
+            "nutrition_grade_fr": "a",
+            "product_name_fr": "Muesli bio chocolat noir",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/501/047/735/6239/front_fr.76.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/501/047/735/6239/front_fr.76.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/501/047/735/6239/nutrition_fr.68.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/501/047/735/6239/nutrition_fr.68.200.jpg",
+            "stores": [
+                "carrefour-fr"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/5010477356239/muesli-bio-chocolat-noir-jordans"
+        },
+        {
+            "product": "3159470001424",
+            "category": "Céréales et dérivés",
+            "ingredients_text_fr": "Son de _blé_ (87%), Sucre, Arôme de malt d'orge_, Sel. Vitamines et Minéraux: Vitamines (Niacine, B6, B2, B1, Acide folique, B12) et Fer.",
+            "nutrition_grade_fr": "c",
+            "product_name_fr": "Céréales All Bran Kellogg's Fibre Plus",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/315/947/000/1424/front_fr.115.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/315/947/000/1424/front_fr.115.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/315/947/000/1424/nutrition_fr.70.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/315/947/000/1424/nutrition_fr.70.200.jpg",
+            "stores": [
+                "intermarche",
+                "leclerc",
+                "e-leclerc",
+                "geant",
+                "auchan",
+                "carrefour",
+                "hyper-u",
+                "super-u",
+                "magasins-u",
+                "carrefour-fr"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3159470001424/cereales-all-bran-kellogg-s-fibre-plus"
+        },
+        {
+            "product": "11044204",
+            "category": "Céréales et dérivés",
+            "ingredients_text_fr": "Flocons d'avoine complète* 54 %,sucre de canne brut*, flocons de blé complet&quot;, graisse de palme*, extrudé de riz&quot; (farine de riz*, farine de malt d'orge*, sel marin), cacao en poudre* 3%, noix de coco râpée* 1,5%, chocolat au lait* 1,3% (sucre de canne brut*, beurre de cacao*, lait entier poudre&quot;, cacao en pâte*), chocolat no 1.3 % cacao en pâte*, sucre de canne brut*, beurre de cacao*), sel marin",
+            "nutrition_grade_fr": "c",
+            "product_name_fr": "Muesli Crunchy Avoine Chocolat",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/11044204/front_fr.59.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/11044204/front_fr.59.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/11044204/nutrition_fr.62.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/11044204/nutrition_fr.62.200.jpg",
+            "stores": [
+                "alnatura"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/11044204/muesli-crunchy-avoine-chocolat-alnatura"
+        },
+        {
+            "product": "3155251205524",
+            "category": "Produits laitiers",
+            "ingredients_text_fr": "_Beurre_ (_crème_ origine UE)",
+            "nutrition_grade_fr": "e",
+            "product_name_fr": "Beurre Tendre Doux",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/315/525/120/5524/front_fr.108.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/315/525/120/5524/front_fr.108.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/315/525/120/5524/nutrition_fr.110.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/315/525/120/5524/nutrition_fr.110.200.jpg",
+            "stores": [
+                "leclerc",
+                "magasins-u",
+                "carrefour-fr"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3155251205524/beurre-tendre-doux-president"
+        },
+        {
+            "product": "3329770057234",
+            "category": "Produits laitiers",
+            "ingredients_text_fr": "Lait écrémé pasteurisé, concentré des minéraux du lait et protéines de lait, ferments lactiques, vitamine D.",
+            "nutrition_grade_fr": "a",
+            "product_name_fr": "Câlin",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/332/977/005/7234/front_fr.128.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/332/977/005/7234/front_fr.128.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/332/977/005/7234/nutrition_fr.113.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/332/977/005/7234/nutrition_fr.113.200.jpg",
+            "stores": [
+                "carrefour",
+                "franprix",
+                "magasins-u",
+                "carrefour-fr"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3329770057234/calin-yoplait"
+        },
+        {
+            "product": "3428273980046",
+            "category": "Produits laitiers",
+            "ingredients_text_fr": "Lait 1,2 % de matière grasse (origine France), lactase, vitamine D.",
+            "nutrition_grade_fr": "a",
+            "product_name_fr": "Lait 100 % français Matin Léger® SANS LACTOSE Lait 1,2% M.G.",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/342/827/398/0046/front_fr.131.400.jpg",
+            "product_image_small": "https://images.openfoodfacts.org/images/products/342/827/398/0046/front_fr.131.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/342/827/398/0046/nutrition_fr.137.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/342/827/398/0046/nutrition_fr.137.200.jpg",
+            "stores": [
+                "auchan",
+                "bi1-auchan"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3428273980046/lait-100-francais-matin-leger-sans-lactose-lait-1-2-m-g-lactel"
+        },
+        {
+            "product": "3023291122005",
+            "category": "Produits laitiers",
+            "ingredients_text_fr": "Lait entier (83,1%), crème (12,0%) (lait), poudre de lait écrémé, ferments lactiques. Fabriqué en France avec du lait français.",
+            "nutrition_grade_fr": "c",
+            "product_name_fr": "Yaos yaourt à la grecque nature",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/302/329/112/2005/front_fr.67.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/302/329/112/2005/front_fr.67.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/302/329/112/2005/nutrition_fr.61.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/302/329/112/2005/nutrition_fr.61.200.jpg",
+            "stores": [
+                "magasins-u",
+                "carrefour-fr"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3023291122005/yaos-yaourt-a-la-grecque-nature-nestle"
+        },
+        {
+            "product": "3033491690334",
+            "category": "Produits laitiers",
+            "ingredients_text_fr": "Lait écrémé, oligo-fructose, noix de coco (0,5%), édulcorants (acésulfame-k,sucralose), épaississants (amidon transformé de maïs, carraghénanes), correcteurs d'acidité (acide citrique, citrate de sodium), arômes naturels, ferments lactiques (lait).",
+            "nutrition_grade_fr": "a",
+            "product_name_fr": "HiPRO Saveur Coco",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/303/349/169/0334/front_fr.38.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/303/349/169/0334/front_fr.38.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/303/349/169/0334/nutrition_fr.34.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/303/349/169/0334/nutrition_fr.34.200.jpg",
+            "stores": [
+                "carrefour-fr"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3033491690334/hipro-saveur-coco-danone"
+        },
+        {
+            "product": "3023290634578",
+            "category": "Produits laitiers",
+            "ingredients_text_fr": "Yaourt au lait entier (83,1%), crème (12,0%) (lait), poudre de lait écrémé, ferments lactiques.",
+            "nutrition_grade_fr": "c",
+            "product_name_fr": "Yaos le yaourt à la Grecque",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/302/329/063/4578/front_fr.85.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/302/329/063/4578/front_fr.85.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/302/329/063/4578/nutrition_fr.114.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/302/329/063/4578/nutrition_fr.114.200.jpg",
+            "stores": [
+                "monoprix",
+                "centre-leclerc"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3023290634578/yaos-le-yaourt-a-la-grecque-nestle"
+        },
+        {
+            "product": "3480341000704",
+            "category": "Produits laitiers",
+            "ingredients_text_fr": "_lait_ écrémé (origine: France). sel. ail. persil, ciboulette, poivre. arômes naturels, ferments lactiques.",
+            "nutrition_grade_fr": "b",
+            "product_name_fr": "Carré frais 0 pourcent ail et fines herbes",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/348/034/100/0704/front_fr.113.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/348/034/100/0704/front_fr.113.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/348/034/100/0704/nutrition_fr.118.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/348/034/100/0704/nutrition_fr.118.200.jpg",
+            "stores": [
+                "auchan",
+                "carrefour-fr"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3480341000704/carre-frais-0-pourcent-ail-et-fines-herbes-elle-vire"
+        },
+        {
+            "product": "3017760363990",
+            "category": "Pains",
+            "ingredients_text_fr": "Céréales 95.2 % (farine complète de _blé_ 94.4 % (dont son de _blé_ 16 %), farine de _blé_ malté), levure, huile de palme, gluten de _blé_, sirop de glucose-fructose, sucre, son de _blé_, sel, agent de traitement de la farine (acide ascorbique)",
+            "nutrition_grade_fr": "c",
+            "product_name_fr": "Biscotte Fibres+",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/301/776/036/3990/front_fr.108.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/301/776/036/3990/front_fr.108.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/301/776/036/3990/nutrition_fr.110.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/301/776/036/3990/nutrition_fr.110.200.jpg",
+            "stores": [
+                "dia",
+                "magasins-u",
+                "carrefour-fr"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3017760363990/biscotte-fibres-heudebert"
+        },
+        {
+            "product": "3228857001101",
+            "category": "Pains",
+            "ingredients_text_fr": "Farines 57% (farine complète de BLÉ 28,6%, farine de BLÉ 28,4%), eau, graines de tournesol 6,1%, son de BLÉ 4,2%, graines de lin brun 3,1%, huile de colza, gluten de BLÉ, levure, arôme (contient alcool), sel, vinaigre, extrait d'acérola. Peut contenir des traces d'OEUFS, SOJA, LAIT, FRUITS A COQUE, GRAINES DE SÉSAME.",
+            "nutrition_grade_fr": "a",
+            "product_name_fr": "Beau & bon pain de mie complet lin tournesol 320g",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/322/885/700/1101/front_fr.48.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/322/885/700/1101/front_fr.48.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/322/885/700/1101/nutrition_fr.6.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/322/885/700/1101/nutrition_fr.6.200.jpg",
+            "stores": [
+                "carrefour-fr"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3228857001101/beau-bon-pain-de-mie-complet-lin-tournesol-320g-harrys"
+        },
+        {
+            "product": "3560070308316",
+            "category": "Pains",
+            "ingredients_text_fr": "Farine de _blé_ complet* 89%, huile végétale de tournesol*, sucre*, levure, sel, gluten de _blé_*, agent de traitement de la farine : acide ascorbique. *biologique",
+            "nutrition_grade_fr": "a",
+            "product_name_fr": "Biscottes complètes bio",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/356/007/030/8316/front_fr.95.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/356/007/030/8316/front_fr.95.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/356/007/030/8316/nutrition_fr.80.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/356/007/030/8316/nutrition_fr.80.200.jpg",
+            "stores": [
+                "carrefour-market",
+                "carrefour",
+                "carrefour-fr"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3560070308316/biscottes-completes-bio-carrefour-bio"
+        },
+        {
+            "product": "3760049790252",
+            "category": "Pains",
+            "ingredients_text_fr": "Farine complète de _blé_ (56%), eau, farine de _blé_, levure, _gluten de blé_, sel, vinaigre, émulsifiant : mono et diglycérides d'acide gras, conservateur : propionate de calcium, agent de traitement de la farine : acide ascorbique,",
+            "nutrition_grade_fr": "a",
+            "product_name_fr": "Pain de mie à la farine complète Toastiligne",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/376/004/979/0252/front_fr.95.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/376/004/979/0252/front_fr.95.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/376/004/979/0252/nutrition_fr.97.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/376/004/979/0252/nutrition_fr.97.200.jpg",
+            "stores": [
+                "leclerc",
+                "magasins-u",
+                "carrefour",
+                "carrefour-fr"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3760049790252/pain-de-mie-a-la-farine-complete-toastiligne-la-boulangere"
+        },
+        {
+            "product": "8410076472946",
+            "category": "Pains",
+            "ingredients_text_fr": "Farine de blé, eau, stabilisant : glycérol, huile de tournesol, émulsifiant : mono - et diglycérides d'acides gras, dextrose, poudres à lever : carbonate acide de sodium, diphosphate disodique ; sel.",
+            "nutrition_grade_fr": "b",
+            "product_name_fr": "8 Tortillas - Blé nature",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/841/007/647/2946/front_fr.84.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/841/007/647/2946/front_fr.84.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/841/007/647/2946/nutrition_fr.58.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/841/007/647/2946/nutrition_fr.58.200.jpg",
+            "stores": [
+                "dia",
+                "magasins-u"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/8410076472946/8-tortillas-ble-nature-old-el-paso"
+        },
+        {
+            "product": "3083681148640",
+            "category": "Plats préparés",
+            "ingredients_text_fr": "Céleri (72%), huile de colza, fromage blanc (6,5%),(lait écrémé pasteurisé, ferments lactiques), eau, moutarde de Dijon (eau, graines de moutarde, vinaigre d'alcool, sel), vinaigre d'alcool, poudre de jaune d'œuf, sucre, sel, épaississant : gomme xanthane, gomme de guar.",
+            "nutrition_grade_fr": "a",
+            "product_name_fr": "Céleri rémoulade au fromage blanc",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/308/368/114/8640/front_fr.22.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/308/368/114/8640/front_fr.22.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/308/368/114/8640/nutrition_fr.8.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/308/368/114/8640/nutrition_fr.8.200.jpg",
+            "stores": [
+                "carrefour-fr",
+                "auchan-fr"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3083681148640/celeri-remoulade-au-fromage-blanc-bonduelle"
+        },
+        {
+            "product": "20023775",
+            "category": "Plats préparés",
+            "ingredients_text_fr": "58% semoule de_blé_dur réhydratée (semoule de blé dur, eau), légumes (10%* tomates, 9,9% * poivron, 5%* oignon), jus de citron à base de concentré, huile d'olive vierge extra, huile de colza,2% raisins secs, vinaigre d'alcool, sel, épices, conservateur: sorbate de potassium; 0,1% menthe, *rapporté au produit fini.",
+            "nutrition_grade_fr": "b",
+            "product_name_fr": "Taboulé à l’orientale",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/20023775/front_fr.170.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/20023775/front_fr.170.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/20023775/nutrition_fr.160.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/20023775/nutrition_fr.160.200.jpg",
+            "stores": [
+                "lidl"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/20023775/taboule-a-l-orientale-saladinettes"
+        },
+        {
+            "product": "3083681081596",
+            "category": "Plats préparés",
+            "ingredients_text_fr": "Riz (52%), tomates (11%), _thon_ (7%), petits pois (4%), olives noires (4%), maïs doux (4%), poivrons, vinaigre d'alcool, huile de colza, huile d'olive vierge extra, basilic (0,9%), sel, _moutarde_ de Dijon (eau, graines de _moutarde_, vinaigre d'alcool, sel), sucre, épaississants : gomme xanthane - gomme guar, arômes naturels.",
+            "nutrition_grade_fr": "b",
+            "product_name_fr": "Riz à la Provençale au Thon & Basilic",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/308/368/108/1596/front_fr.97.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/308/368/108/1596/front_fr.97.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/308/368/108/1596/nutrition_fr.104.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/308/368/108/1596/nutrition_fr.104.200.jpg",
+            "stores": [
+                "franprix",
+                "leclerc",
+                "carrefour",
+                "carrefour-fr"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3083681081596/riz-a-la-provencale-au-thon-basilic-bonduelle"
+        },
+        {
+            "product": "3242274001056",
+            "category": "Plats préparés",
+            "ingredients_text_fr": "=&gt; Conchiglie et fusilli cuits 40% (eau, semoule de blé dur, œuf, sel, épices, piment doux), œuf 17%, salade verte 14%, jambon cuit supérieur 11% (jambon de porc, eau, sel, bouillon (porc, condiments, légumes, sel), arôme naturel, lactose, dextrose, conservateur: E250, antioxydant : E316, condiments), tomates cerises 8%, emmental 5%, huile de colza, jus de citron, persil, ferments. (% exprimés sur la salade) Cette salade peut contenir des traces de soja. =&gt; Sauce vinaigrette 25g : huile de colza, vinaigre balsamique de Modène 39% [vinaigre de vin (sulfites), moût de raisin, colorant : E150d], huile d’olive vierge, sel. (% exprimés sur la sauce)\r\n=&gt; Cookie pépites de chocolat 18g : farine de blé, pépites de chocolat 23% (sucre, pâte de cacao, beurre de cacao, poudre de cacao maigre, émulsifiant : lécithine de tournesol, arôme vanille), sucre, huile de colza, beurre concentré, sucre roux, blanc d'œuf, jaune d'œuf, eau, sel, poudres à lever : E450, E500, amidon de blé. (% exprimé sur le cookie)\r\n=&gt; 3 gressins 15g : farine de blé, eau, huile d’olive vierge, romarin, levure boulangère, sel, graines de pavot, semoule de blé dur, sucre.  Porc : Origine UE",
+            "nutrition_grade_fr": "b",
+            "product_name_fr": "Salade & Compagnie - Montmartre",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/324/227/400/1056/front_fr.67.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/324/227/400/1056/front_fr.67.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/324/227/400/1056/nutrition_fr.134.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/324/227/400/1056/nutrition_fr.134.200.jpg",
+            "stores": [
+                "super-u",
+                "banque-alimentaire",
+                "magasins-u",
+                "carrefour-fr"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3242274001056/salade-compagnie-montmartre-sodebo"
+        },
+        {
+            "product": "3281780893892",
+            "category": "Plats préparés",
+            "ingredients_text_fr": "semoule de blé dur réhydratée 58% (semoule de blé dur, eau), légumes (tomates, poivrons, oignons), jus de citron à base de concentré, huile d'olive vierge extra, huile de colza, raisins secs, menthe déshydratée, épices, vinaigre d'alcool, sel, conservateur: sorbàte de potassium,",
+            "nutrition_grade_fr": "b",
+            "product_name_fr": "Mon Taboulé oriental",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/328/178/089/3892/front_fr.18.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/328/178/089/3892/front_fr.18.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/328/178/089/3892/nutrition_fr.34.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/328/178/089/3892/nutrition_fr.34.200.jpg",
+            "stores": [
+                "carrefour-fr"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3281780893892/mon-taboule-oriental-pierre-martinet"
+        },
+        {
+            "product": "3036811363147",
+            "category": "Plats préparés",
+            "ingredients_text_fr": "Eau, légumes 42% (jus de tomates à base de concentré, pomme de terre, carotte, oignon, poireau, potiron, céleri, petit pois, navet,chou-fleur), amidon transformé de maïs, huile de colza, beurre de cuisine, sel, lait écrémé en poudre, arômes (contient lait),",
+            "nutrition_grade_fr": "b",
+            "product_name_fr": "PurSoup' Velouté de 10 légumes",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/303/681/136/3147/front_fr.87.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/303/681/136/3147/front_fr.87.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/303/681/136/3147/nutrition_fr.89.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/303/681/136/3147/nutrition_fr.89.200.jpg",
+            "stores": [
+                "super-u",
+                "carrefour",
+                "carrefour-market",
+                "e-leclerc",
+                "auchan"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/3036811363147/pursoup-veloute-de-10-legumes-liebig"
+        },
+        {
+            "product": "20289249",
+            "category": "Plats préparés",
+            "ingredients_text_fr": "Eau,18,5% ravioli (semoule de blé dur, eau, chapelure (blé),2,45% oignons, œuf, huile de tournesol, persil, sel, épices (cannelle, poivre noir, muscade, girofle), poivre, ail),12,5% concentré de tomate, huile de tournesol, sucre,1,1% oignons, sel de mer,0,55% carottes,0,28% basilic,0,28% céleri, romarin, persil, thym, marjolaine, sarriette, paprika,0,02% ail, poivre noir, jus concentré de citron,",
+            "nutrition_grade_fr": "c",
+            "product_name_fr": "Raviolis végétariens",
+            "product_image_large": "https: //images.openfoodfacts.org/images/products/20289249/front_fr.45.400.jpg",
+            "product_image_small": "https: //images.openfoodfacts.org/images/products/20289249/front_fr.45.200.jpg",
+            "product_image_nutrition_large": "https: //images.openfoodfacts.org/images/products/20289249/nutrition_fr.44.400.jpg",
+            "product_image_nutrition_small": "https: //images.openfoodfacts.org/images/products/20289249/nutrition_fr.44.200.jpg",
+            "stores": [
+                "Grandes Surfaces",
+                "Superettes"
+            ],
+            "url": "https: //fr.openfoodfacts.org/produit/20289249/raviolis-vegetariens-toque-du-chef"
+        }
+    ]
+}

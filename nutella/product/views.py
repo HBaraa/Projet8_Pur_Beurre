@@ -3,10 +3,11 @@ from django.db.models import Q
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout, login
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout, login, authenticate
+from .models import Products, CustomUser
 from .forms import SignUpForm
 from django.contrib.auth import views as auth_views
 from .logic_file import (
-    sign_up,
     found_products,
     search_for_substitute,
     saving_substitute,
@@ -17,6 +18,10 @@ from .models import Products
 
 def home(request):
     return render(request, "home.html")
+
+
+def accueil(request):
+    return render(request, "accueil.html")
 
 
 def contact(request):
@@ -40,11 +45,21 @@ def signup(request):
     if request.method == "POST":
         form = SignUpForm(request.POST)
         if form.is_valid():
-            user = sign_up(form, request)
+            email = form.cleaned_data["email"]
+            first_name = form.cleaned_data["first_name"]
+            second_name = form.cleaned_data["second_name"]
+            password = form.cleaned_data["password2"]
+            user = authenticate(request, username=email, password=password)
+            if user is None:
+                user = CustomUser.objects.create_user(
+                email=email,
+                first_name=first_name,
+                second_name=second_name,
+                password=password,
+            )
             login(request, user)
             return redirect(reverse("home"))
         else:
-            user = sign_up(form, request)
             login(request, user)
             return redirect(reverse("login"))
     else:
@@ -105,4 +120,4 @@ def moncompte(request):
 
 def logout_view(request):
     logout(request)
-    return redirect("home")
+    return redirect("login")

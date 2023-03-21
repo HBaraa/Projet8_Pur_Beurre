@@ -3,85 +3,91 @@
 {% block content %}
 
 
-<header class="masthead" style="background-color: black; width: 1100px; height: 412px; position: relative; left: 17%;">
-    <div class="container px-4 px-lg-5" style="padding-top: 10rem; padding-bottom: calc(10rem - 4.5rem); background-image: url('{{ element.image_large}}'); background-position: center; background-repeat: no-repeat; background-attachment: scroll; background-size: auto;">
-        <hr class="text_zone divider my-4" />
-        <div class="mastbg" >
-            <h4 style="color: white;"> <strong>Le produit que vous avez choisi est {{ element.name }} </strong></h4>
-            <h4 style="color: #f1b099;"> {{ element.name }} </h4>
-            <div  class="nutriscore_pic" >
-                {% if element.nutriscore == '1' %}
-                    <img src="{% static 'images/a.png' %}"  alt=””>
-                {% elif element.nutriscore == '2' %}
-                    <img src="{% static 'images/b.png' %}"  alt=””>
-                {% elif element.nutriscore == '3' %}
-                    <img src="{% static 'images/c.png' %}"  alt=””>
-                {% elif element.nutriscore == '4' %}
-                    <img src="{% static 'images/d.png' %}"  alt=””>
-                {% elif element.nutriscore == '5' %}
-                    <img src="{% static 'images/e.png' %}"  alt=””>
-                {% else %}
-                    <h6> OUUPS Pardon!! Nutriscore n'est pas mentionné </h6>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</header>
-<div class="container">
-    <div class="col">
-        <div class="row">
-            {% if element.nutriscore == 1 %}
-                <h5> Vous avez fait le meuiller choix </h5>
-                {% for x in substitutes %}
-                    {% if x.nutriscore == 1 %}
-                        <div class="col-4 md-1" style="border:1px solid black">
-                            <div class="card"  >
-                                <div class="card-body" >
-                                    <img class=”card-img-top” src={{ x.image_small }} >
-                                    <h6 class="card-title">{{ x.name }}</h6>
-                                <div  class="nutriscore_pic" >
-                                    <img src="{% static 'images/a.png' %}"  alt=””>
-                                </div>
-                            </div>
-                        <div>
-                    {% endif %}
-                {% endfor%}
-            {% endif %}
-            {% if element.nutriscore != 1 %}
-                {% for x in substitutes %}
-                    {%if x.nutriscore < element.nutriscore %}
-                        <div class="col-4 md-1" style="border:1px solid black">
-                            <div class="card"  >
-                                <div class="card-body">
-                                    <a href="{% url 'details' x.id %}">
-                                        <img class="card-img-top" src={{ x.image_small }} style="width:200px; heigh:200px">
-                                        <h6 class="card-title">{{ x.name }}</h6>
-                                    </a>
-                                    <div  class="nutriscore_pic" >
-                                        {% if x.nutriscore == '1' %}
-                                            <img src="{% static 'images/a.png' %}"  alt=””>
-                                        {% elif x.nutriscore == '2' %}
-                                            <img src="{% static 'images/b.png' %}"  alt=””>
-                                        {% elif x.nutriscore == '3' %}
-                                            <img src="{% static 'images/c.png' %}"  alt=””>
-                                        {% elif x.nutriscore == '4' %}
-                                            <img src="{% static 'images/d.png' %}"  alt=””>
-                                        {% elif x.nutriscore == '5' %}
-                                            <img src="{% static 'images/e.png' %}"  alt=””>
-                                        {% else %}
-                                            <h6> Nutriscore non mentionné </h6>
-                                        {% endif %}
-                                        <form action="{% url 'save_favorite' x.id element.id %}" method="post">
-                                            {% csrf_token %}
-                                            <button class="btn btn-primary btn-xl js-scroll-trigger" type="submit" name="submit" >Sauvegarder </button>
-                                            </form>
-                                    </div>
-                                </div>
-                            </div>
+<div class="container align-items-center justify-content-center">
+    <div class="row">
+        <div class="col-12 center">
+            <div class="masthead" style="background-color: black;  height: 412px; position: relative;">
+                <div class="container px-4 px-lg-5" style="padding-top: 10rem; padding-bottom: calc(10rem - 4.5rem); background-image: url('{{ element.image_large}}'); background-position: center; background-repeat: no-repeat; background-attachment: scroll; background-size: auto;">
+                    <hr class="text_zone divider my-4" />
+                    <div class="mastbg" >
+                        <h4 style="color: white;"> <strong>Le produit que vous avez choisi est {{ element.name }} </strong></h4>
+                        <h4 style="color: #f1b099;"> {{ element.name }} </h4>
+                        <div  class="nutriscore_pic" >
+                            {% if element.nutriscore == '1' %}
+                                <img src="{% static 'images/a.png' %}"  alt=””>
+                            {% elif element.nutriscore == '2' %}
+                                <img src="{% static 'images/b.png' %}"  alt=””>
+                            {% elif element.nutriscore == '3' %}
+                                <img src="{% static 'images/c.png' %}"  alt=””>
+                            {% elif element.nutriscore == '4' %}
+                                <img src="{% static 'images/d.png' %}"  alt=””>
+                            {% elif element.nutriscore == '5' %}
+                                <img src="{% static 'images/e.png' %}"  alt=””>
+                            {% else %}
+                                <h6> OUUPS Pardon!! Nutriscore n'est pas mentionné </h6>
+                            {% endif %}
                         </div>
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="col-12">
+                    <div class="row">
+                        {% if element.nutriscore == 1 %}
+                            <h5> Vous avez fait le meuiller choix </h5>
+                            {% for x in substitutes %}
+                                {% if x.nutriscore == 1 %}
+                                    <div class="col-lg-4 col-md-ms-1" style="border:1px solid black">
+                                        <div class="card">
+                                            <div class="card-body center" style="display: block; margin: 0px auto;">
+                                                <img class=”card-img-top” src={{ x.image_small }} >
+                                                <h6 class="card-title">{{ x.name }}</h6>
+                                            <div  class="nutriscore_pic" >
+                                                <img src="{% static 'images/a.png' %}"  alt=””>
+                                            </div>
+                                        </div>
+                                    <div>
+                                {% endif %}
+                            {% endfor%}
+                        {% endif %}
+                        {% if element.nutriscore != 1 %}
+                            {% for x in substitutes %}
+                                {%if x.nutriscore < element.nutriscore %}
+                                    <div class="col-4 md-1" style="border:1px solid black">
+                                        <div class="card center">
+                                            <div class="card-body text-center" style="bottom:-10%;">
+                                                <a href="{% url 'details' x.id %}">
+                                                    <img class="card-img-top " src={{ x.image_small }} style="height:100%; width:100%; bottom:-10%">
+                                                    <h6 class="card-title">{{ x.name }}</h6>
+                                                </a>
+                                                <div  class="nutriscore_pic" >
+                                                    {% if x.nutriscore == '1' %}
+                                                        <img src="{% static 'images/a.png' %}"  alt=””>
+                                                    {% elif x.nutriscore == '2' %}
+                                                        <img src="{% static 'images/b.png' %}"  alt=””>
+                                                    {% elif x.nutriscore == '3' %}
+                                                        <img src="{% static 'images/c.png' %}"  alt=””>
+                                                    {% elif x.nutriscore == '4' %}
+                                                        <img src="{% static 'images/d.png' %}"  alt=””>
+                                                    {% elif x.nutriscore == '5' %}
+                                                        <img src="{% static 'images/e.png' %}"  alt=””>
+                                                    {% else %}
+                                                        <h6> Nutriscore non mentionné </h6>
+                                                    {% endif %}
+                                                    <form action="{% url 'save_favorite' x.id element.id %}" method="post">
+                                                        {% csrf_token %}
+                                                        <button class="btn btn-primary btn-xl js-scroll-trigger" type="submit" name="submit" >Sauvegarder </button>
+                                                        </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -25,6 +25,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/login/", views.MyLoginView.as_view(), name="login"),
     path("home/", views.home, name="home"),
+    path("accueil/", views.accueil, name="accueil"),
     path("moncompte/", views.moncompte, name="moncompte"),
     path("contact/", views.contact, name="contact"),
     path("mention/", views.mention, name="mention"),

@@ -3,33 +3,34 @@ import json
 from django.core.management.base import BaseCommand, CommandError
 
 from nutella.product.models import Products, Categories, Favorite
-from .found_prod import GetDatas
-from .filter import filter_file
+from ..found_prod import GetDatas
+
 
 
 class Command(BaseCommand):
-    def handle(self, *args, **options):
+    def handle(self, *args, **kwargs):
         help = "Insert all products an relations in the models tables."
 
-        print("Début de travail!...")
+        # print("Début de travail!...")
 
         GetDatas.download_all_products(GetDatas)
 
         products_to_insert = GetDatas.products_to_inser
+        # print(products_to_insert)
+        # print(
+        #    "Nous avons ",
+        #    len(products_to_insert),
+        #    "produits téléchargées et nettoyées!",
+        # )
 
-        print(
-            "Nous avons ",
-            len(products_to_insert),
-            "produits téléchargées et nettoyées!",
-        )
-
-        print("Insértion de tous les produits dans la base de données!")
+        # print("Insértion de tous les produits dans la base de données!")
         cat_list = []
         for data_dict in products_to_insert:
             try:
                 c, created = Categories.objects.update_or_create(
                     category=data_dict["category"]
                 )
+                c.save()
                 cat = Categories.objects.get(category=data_dict["category"]).id
                 if data_dict["nutrition_grade_fr"] == "a":
                     nut = 1
@@ -52,6 +53,7 @@ class Command(BaseCommand):
                     nutriscore=nut,
                     category_id=cat,
                 )
+                prod.save()
             except Exception as e:
                 e
                 continue

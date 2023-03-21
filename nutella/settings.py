@@ -19,6 +19,7 @@ settings.configure(DEBUG=True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+FIXTURE_DIRS = (os.path.join(BASE_DIR, "fixtures"),)
 
 # django.setup()
 # Quick-start development settings - unsuitable for production
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "nutella.product",
+    "django_fixtures_command",
 ]
 
 MIDDLEWARE = [
@@ -97,6 +99,16 @@ DATABASES = {
         "PORT": "",
     }
 }
+
+CATEGORIE_LIST = [
+        "Snacks",
+        "Céréales et dérivés",
+        "Boissons",
+        "Produits laitiers",
+        "Pains",
+        "Plats préparés",
+        ]
+
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -145,4 +157,3 @@ AUTH_USER_MODEL = "product.CustomUser"
 
 
 AUTHENTICATION_BACKENDS = ["django.contrib.auth.backends.ModelBackend"]
-FIXTURE_DIRS = (os.path.join(BASE_DIR, "fixtures"),)

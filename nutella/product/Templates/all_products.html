@@ -2,43 +2,49 @@
 {% load static%}
 {% block content %}
 
-<div class="container" >
-    <div class="searchArea" id="searchArea">
-        <div class="col-lg-8 align-self-baseline">
-            <h2 class="ph" id="ph">Choisissez les meuilleurs produits que vous voulez consommer!</h2>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="col">
-        <div class="row">
-            {% for x in products %}
-                <div class="col-4 md-1">
-                    <div class="card" >
-                        <div class="card-body">
-                            <a href="{% url 'product_infos' x.id %}">
-                                <img class=”card-img-top” src={{ x.image_small }} >
-                            </a>
-                            <h6 class="card-title">{{ x.name }}</h6>
-                            <div  class="nutriscore_pic" >
-                                {% if x.nutriscore == '1' %}
-                                    <img src="../static/images/a.png"  alt=”” id="nutriscore_pic">
-                                {% elif x.nutriscore == '2' %}
-                                    <img src="../static/images/b.png"  alt=”” id="nutriscore_pic">
-                                {% elif x.nutriscore == '3' %}
-                                    <img src="../static/images/c.png"  alt=”” id="nutriscore_pic">
-                                {% elif x.nutriscore == '4' %}
-                                    <img src="../static/images/d.png"  alt=”” id="nutriscore_pic">
-                                {% elif x.nutriscore == '5' %}
-                                    <img src="../static/images/e.png"  alt=”” id="nutriscore_pic">
-                                {% else %}
-                                    <h6> Nutriscore non mentionné </h6>
-                                {% endif %}
-                            </div>
-                        </div>
+<div class="container align-items-center justify-content-center">
+    <div class="row">
+        <div class="col-lg-12 center">
+            <div class="container align-items-center justify-content-center" >
+                <div class="searchArea" id="searchArea">
+                    <div class="col-lg-10 align-self-baseline">
+                        <h2 class="ph" id="ph">Choisissez les meuilleurs produits que vous voulez consommer!</h2>
                     </div>
                 </div>
-            {% endfor %}
+            </div>
+            <div class="container align-items-center justify-content-center">
+                <div class="col-lg-12">
+                    <div class="row">
+                        {% for x in products %}
+                            <div class="col-4 md-1">
+                                <div class="card" >
+                                    <div class="card-body">
+                                        <a href="{% url 'product_infos' x.id %}">
+                                            <img class=”card-img-top” src={{ x.image_small }} >
+                                        </a>
+                                        <h6 class="card-title">{{ x.name }}</h6>
+                                        <div  class="nutriscore_pic" >
+                                            {% if x.nutriscore == '1' %}
+                                                <img src="../static/images/a.png"  alt=”” id="nutriscore_pic">
+                                            {% elif x.nutriscore == '2' %}
+                                                <img src="../static/images/b.png"  alt=”” id="nutriscore_pic">
+                                            {% elif x.nutriscore == '3' %}
+                                                <img src="../static/images/c.png"  alt=”” id="nutriscore_pic">
+                                            {% elif x.nutriscore == '4' %}
+                                                <img src="../static/images/d.png"  alt=”” id="nutriscore_pic">
+                                            {% elif x.nutriscore == '5' %}
+                                                <img src="../static/images/e.png"  alt=”” id="nutriscore_pic">
+                                            {% else %}
+                                                <h6> Nutriscore non mentionné </h6>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

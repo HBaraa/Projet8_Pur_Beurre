@@ -46,7 +46,6 @@ class TestSignUpForm(TestCase):
         }
 
         form = SignUpForm(data=form_data)
-        print(form.errors)
         self.assertTrue(form.error_messages)
 
     def test_custom_user_with_false_password2(self):
@@ -59,7 +58,6 @@ class TestSignUpForm(TestCase):
         }
 
         form = SignUpForm(data=form_data)
-        print(form.errors)
         self.assertTrue(form.error_messages)
 
     def test_custom_user_without_first_name(self):
@@ -102,5 +100,5 @@ class TestSignUpForm(TestCase):
         }
 
         form = SignUpForm(data=customer2)
-        print(form.errors)
+        # print(form.errors)
         self.assertTrue(form.error_messages)

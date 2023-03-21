@@ -1,0 +1,144 @@
+﻿[
+    {
+        "product_name_fr": "Lait demi-\u00e9cr\u00e9m\u00e9 avec Vitamine D",
+        "stores": [
+            "bi1"
+        ],
+        "product": "3252210390014",
+        "ingredients_text_fr": "Lait demi-\u00e9cr\u00e9m\u00e9, vitamine D",
+        "category": "Produits laitiers",
+        "nutrition_grade_fr": "b",
+        "product_image_large": "https://static.openfoodfacts.org/images/products/325/221/039/0014/front_fr.142.400.jpg",
+        "product_image_small": "https://static.openfoodfacts.org/images/products/325/221/039/0014/front_fr.142.200.jpg",
+        "product_image_nutrition_large": "https://static.openfoodfacts.org/images/products/325/221/039/0014/nutrition_fr.136.400.jpg",
+        "product_image_nutrition_small": "https://static.openfoodfacts.org/images/products/325/221/039/0014/nutrition_fr.136.200.jpg",
+        "url": "https://fr.openfoodfacts.org/produit/3252210390014/lait-demi-ecreme-avec-vitamine-d-lactel"
+    },
+    {
+        "ingredients_text_fr": "Lait \u00e0 1,2% de M,G, st\u00e9rilis\u00e9 UHT sans lactose (,lt,0,19/100 ml) et enrichi en vitamine D, Ingr\u00e9dien ts:lait 1,2% de mati\u00e8re grasse (origine France), lactase, vitamine D, lalouro nutriti nnlla",
+        "category": "Produits laitiers",
+        "nutrition_grade_fr": "b",
+        "product_image_large": "https://static.openfoodfacts.org/images/products/342/827/398/0046/front_fr.52.400.jpg",
+        "product_image_small": "https://static.openfoodfacts.org/images/products/342/827/398/0046/front_fr.52.200.jpg",
+        "product_image_nutrition_large": "https://static.openfoodfacts.org/images/products/342/827/398/0046/nutrition_fr.96.400.jpg",
+        "product_image_nutrition_small": "https://static.openfoodfacts.org/images/products/342/827/398/0046/nutrition_fr.96.200.jpg",
+        "url": "https://fr.openfoodfacts.org/produit/3428273980046/lait-matin-leger-demi-ecreme-lactel",
+        "product_name_fr": "Lait Matin L\u00e9ger Demi-\u00c9cr\u00e9m\u00e9",
+        "stores": [
+            "auchan",
+            "banque-alimentaire"
+        ],
+        "product": "3428273980046"
+    },
+    {
+        "nutrition_grade_fr": "b",
+        "category": "Produits laitiers",
+        "ingredients_text_fr": "Lait demi-\u00e9cr\u00e9m\u00e9, vitamine D.",
+        "url": "https://fr.openfoodfacts.org/produit/3428271940028/lait-demi-ecreme-avec-vitamine-d-lactel",
+        "product_image_large": "https://static.openfoodfacts.org/images/products/342/827/194/0028/front_fr.41.400.jpg",
+        "product_image_small": "https://static.openfoodfacts.org/images/products/342/827/194/0028/front_fr.41.200.jpg",
+        "product_image_nutrition_large": "https://static.openfoodfacts.org/images/products/342/827/194/0028/nutrition_fr.5.400.jpg",
+        "product_image_nutrition_small": "https://static.openfoodfacts.org/images/products/342/827/194/0028/nutrition_fr.5.200.jpg",
+        "stores": [
+            "carrefour",
+            "intermarche",
+            "bi1"
+        ],
+        "product_name_fr": "Lait Demi-\u00e9cr\u00e9m\u00e9 avec Vitamine D",
+        "product": "3428271940028"
+    },
+    {
+        "stores": [
+            "Grandes Surfaces",
+            "Superettes"
+        ],
+        "product_name_fr": "Matin l\u00e9ger sans lactose",
+        "product": "3428272040055",
+        "nutrition_grade_fr": "a",
+        "ingredients_text_fr": "lait \u00e9cr\u00e9m\u00e9 (origine France), lactase, vitamine D.",
+        "category": "Produits laitiers",
+        "url": "https://fr.openfoodfacts.org/produit/3428272040055/matin-leger-sans-lactose-lactel",
+        "product_image_large": "https://static.openfoodfacts.org/images/products/342/827/204/0055/front_fr.101.400.jpg",
+        "product_image_small": "https://static.openfoodfacts.org/images/products/342/827/204/0055/front_fr.101.200.jpg",
+        "product_image_nutrition_large": "https://static.openfoodfacts.org/images/products/342/827/204/0055/nutrition_fr.103.400.jpg",
+        "product_image_nutrition_small": "https://static.openfoodfacts.org/images/products/342/827/204/0055/nutrition_fr.103.200.jpg"
+    },
+    {
+        "product_image_large": "https://static.openfoodfacts.org/images/products/342/827/211/0017/front_fr.7.400.jpg",
+        "product_image_small": "https://static.openfoodfacts.org/images/products/342/827/211/0017/front_fr.7.200.jpg",
+        "product_image_nutrition_large": "https://static.openfoodfacts.org/images/products/342/827/211/0017/nutrition_fr.43.400.jpg",
+        "product_image_nutrition_small": "https://static.openfoodfacts.org/images/products/342/827/211/0017/nutrition_fr.43.200.jpg",
+        "url": "https://fr.openfoodfacts.org/produit/3428272110017/matin-leger-bio-lactel",
+        "ingredients_text_fr": "lait, lactase",
+        "category": "Produits laitiers",
+        "nutrition_grade_fr": "b",
+        "product": "3428272110017",
+        "product_name_fr": "Matin l\u00e9ger BiO",
+        "stores": [
+            "super-u"
+        ]
+    },
+    {
+        "product_image_large": "https://static.openfoodfacts.org/images/products/342/827/496/0078/front_fr.33.400.jpg",
+        "product_image_small": "https://static.openfoodfacts.org/images/products/342/827/496/0078/front_fr.33.200.jpg",
+        "product_image_nutrition_large": "https://static.openfoodfacts.org/images/products/342/827/496/0078/nutrition_fr.7.400.jpg",
+        "product_image_nutrition_small": "https://static.openfoodfacts.org/images/products/342/827/496/0078/nutrition_fr.7.200.jpg",
+        "url": "https://fr.openfoodfacts.org/produit/3428274960078/lait-de-chevre-lactel",
+        "category": "Produits laitiers",
+        "ingredients_text_fr": "Lait de ch\u00e8vre demi-\u00e9cr\u00e9m\u00e9, stabilisant E 3391 ii",
+        "nutrition_grade_fr": "a",
+        "product": "3428274960078",
+        "product_name_fr": "Lait de ch\u00e8vre",
+        "stores": [
+            "intermarche",
+            "auchan"
+        ]
+    },
+    {
+        "product_image_large": "https://static.openfoodfacts.org/images/products/342/827/198/0031/front_fr.37.400.jpg",
+        "product_image_small": "https://static.openfoodfacts.org/images/products/342/827/198/0031/front_fr.37.200.jpg",
+        "product_image_nutrition_large": "https://static.openfoodfacts.org/images/products/342/827/198/0031/nutrition_fr.18.400.jpg",
+        "product_image_nutrition_small": "https://static.openfoodfacts.org/images/products/342/827/198/0031/nutrition_fr.18.200.jpg",
+        "url": "https://fr.openfoodfacts.org/produit/3428271980031/lait-bio-demi-ecreme-lactel",
+        "ingredients_text_fr": "_Lait_ demi-\u00e9cr\u00e9m\u00e9 issu de l'agriculture biologique st\u00e9rilis\u00e9 UHT.",
+        "category": "Produits laitiers",
+        "nutrition_grade_fr": "b",
+        "product": "3428271980031",
+        "product_name_fr": "Lait Bio Demi-\u00c9cr\u00e9m\u00e9",
+        "stores": [
+            "carrefour",
+            "super-u"
+        ]
+    },
+    {
+        "product": "3428273000034",
+        "stores": [
+            "monoprix"
+        ],
+        "product_name_fr": "Matin leger",
+        "url": "https://fr.openfoodfacts.org/produit/3428273000034/matin-leger-lactel",
+        "product_image_large": "https://static.openfoodfacts.org/images/products/342/827/300/0034/front_fr.9.400.jpg",
+        "product_image_small": "https://static.openfoodfacts.org/images/products/342/827/300/0034/front_fr.9.200.jpg",
+        "product_image_nutrition_large": "https://static.openfoodfacts.org/images/products/342/827/300/0034/nutrition_fr.18.400.jpg",
+        "product_image_nutrition_small": "https://static.openfoodfacts.org/images/products/342/827/300/0034/nutrition_fr.18.200.jpg",
+        "nutrition_grade_fr": "a",
+        "category": "Produits laitiers",
+        "ingredients_text_fr": "_Lait_ \u00e0 1,2 % de mati\u00e8re grasse, lactase, vitamine D."
+    },
+    {
+        "product": "3428272970147",
+        "stores": [
+            "monoprix",
+            "banque-alimentaire"
+        ],
+        "product_name_fr": "Lait Bio \u00e9cr\u00e9m\u00e9",
+        "url": "https://fr.openfoodfacts.org/produit/3428272970147/lait-bio-ecreme-lactel",
+        "product_image_large": "https://static.openfoodfacts.org/images/products/342/827/297/0147/front_fr.52.400.jpg",
+        "product_image_small": "https://static.openfoodfacts.org/images/products/342/827/297/0147/front_fr.52.200.jpg",
+        "product_image_nutrition_large": "https://static.openfoodfacts.org/images/products/342/827/297/0147/nutrition_fr.60.400.jpg",
+        "product_image_nutrition_small": "https://static.openfoodfacts.org/images/products/342/827/297/0147/nutrition_fr.60.200.jpg",
+        "nutrition_grade_fr": "b",
+        "ingredients_text_fr": "Lait \u00e9cr\u00e9m\u00e9 st\u00e9rilis\u00e9 UHT",
+        "category": "Produits laitiers"
+    }
+]

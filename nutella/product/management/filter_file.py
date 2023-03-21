@@ -1,4 +1,4 @@
-﻿def filter_file(file1, file2):
+﻿def extract_datas(file1, file2):
     """
     Filter the file !!
     """
@@ -9,7 +9,7 @@
         "ingredients_text_fr",
         "nutrition_grade_fr",
     ]  # list of the labels to search
-    print("Faisons du travail de nettoyage sur ", file2, "!")
+    # print("Faisons du travail de nettoyage sur ", file2, "!")
     processed_products = []
 
     for product in products:  # the list contains dictionaries
@@ -67,12 +67,12 @@
     return processed_products  # return cleaned file
 
 
-def eliminate_duplicated_products(file):
+def delete_duplicated_products(file):
     """
     Eliminate duplicated products.
     """
     products = file
-    print("On commence le filtrage!!")
+    # print("On commence le filtrage!!")
     processed_products = []
     for product in products:  # the list contains dictionaries
         if product not in processed_products:
