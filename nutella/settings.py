@@ -101,13 +101,13 @@ DATABASES = {
 }
 
 CATEGORIE_LIST = [
-        "Snacks",
-        "Céréales et dérivés",
-        "Boissons",
-        "Produits laitiers",
-        "Pains",
-        "Plats préparés",
-        ]
+    "Snacks",
+    "Céréales et dérivés",
+    "Boissons",
+    "Produits laitiers",
+    "Pains",
+    "Plats préparés",
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

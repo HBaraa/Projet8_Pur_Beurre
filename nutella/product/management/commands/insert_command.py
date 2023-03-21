@@ -6,7 +6,6 @@ from nutella.product.models import Products, Categories, Favorite
 from ..found_prod import GetDatas
 
 
-
 class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         help = "Insert all products an relations in the models tables."

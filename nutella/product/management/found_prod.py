@@ -25,14 +25,16 @@ class GetDatas:
 
         for categ in settings.CATEGORIE_LIST:
             r = requests.get(
-                        "https://fr.openfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0="
-                        + str(categ)
-                        + "&page_size="
-                        + "&json=1"
+                "https://fr.openfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0="
+                + str(categ)
+                + "&page_size="
+                + "&json=1"
             )
             try:
                 self.current_product = json.loads(r.content)
-                self.current_product = filter_file.extract_datas(self.current_product, categ)
+                self.current_product = filter_file.extract_datas(
+                    self.current_product, categ
+                )
                 if len(self.current_product) != 0:
                     self.all_products.extend(self.current_product)
                 prods = filter_file.delete_duplicated_products(self.all_products)

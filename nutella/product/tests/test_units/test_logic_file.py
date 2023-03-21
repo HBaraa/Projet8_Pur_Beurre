@@ -183,4 +183,3 @@ class LogicTest(TestCase):
         self.assertEqual(substitute_identif, 57)
         substitute_identif = substitutes[0].product_id
         self.assertEqual(substitute_identif, 32)
-
