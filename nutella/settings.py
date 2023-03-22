@@ -13,13 +13,18 @@ import django
 from pathlib import Path
 import os
 from django.conf import settings
-
+import dj_database_url
+import dotenv
 
 settings.configure(DEBUG=True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 FIXTURE_DIRS = (os.path.join(BASE_DIR, "fixtures"),)
+
+dotenv_file = os.path.join(BASE_DIR, ".env")
+if os.path.isfile(dotenv_file):
+    dotenv.load_dotenv(dotenv_file)
 
 # django.setup()
 # Quick-start development settings - unsuitable for production
@@ -35,7 +40,15 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#configurer les serveurs autorisés à accéder à votre app
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', <url de votre projet Heroku>]
+DATABASES = {}
+DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+
+# ajout des liens vers les fichiers statiques
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 OPENFOODFACTS_PAGE_SIZE = os.environ.get("OPENFOODFACTS_PAGE_SIZE", 1000)
 
@@ -60,6 +73,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = "nutella.urls"
