@@ -108,7 +108,7 @@
     border: 1px solid black;
     background-image: url('../static/images/bghome.png');
     background-repeat: no-repeat;
-    background-size: 1200px;
+    background-size: 1250px;
     background-position: 0px 0px;
     padding: 12px;
     margin-bottom: 20px;
@@ -265,13 +265,13 @@
 
 .lien1 {
     position: relative;
-    left: 10%;
+    left: 20%;
     height: 70px;
 }
 
 .lien2 {
     position: relative;
-    left: 17%;
+    left: 25%;
     height: 70px;
 }
 
@@ -291,3 +291,113 @@
 }
 
 
+#pagefeet {
+    border: 1px solid black;
+    visibility: visible;
+    position: relative;
+    bottom: 0%;
+    width: 800px;
+}
+
+#pos1 {
+    position: relative;
+    left: 8%;
+}
+
+#pos2 {
+    position: relative;
+    left: 50%;
+}
+
+#ic_size {
+    left: 20px;
+    width: 30px;
+    height: 30px
+}
+
+#ic1_size {
+    left: 20px
+}
+
+#accueil {
+    visibility: visible;
+    position: relative;
+
+}
+
+#phone {
+    position: relative;
+    right: 2%;
+}
+
+#adress_mail {
+    position: relative;
+}
+
+#size_config {
+    top: 20%;
+    left: 20%
+}
+
+#size_config1 {
+    top: 20%;
+    left: 20%
+}
+
+#dist {
+    top: 20%;
+}
+
+#txt {
+    height: 5%;
+}
+
+#img_size {
+    height: 100px;
+    width: 100px;
+}
+
+#adjt_mention {
+    top: 2%;
+}
+
+#bg_products {
+    background-color: black;
+    height: 412px;
+    position: relative;
+}
+
+#color1 {
+    color: white;
+}
+
+#color2 {
+    color: #f1b099;
+}
+
+#bd {
+    border: 1px solid black
+}
+
+#mg {
+    display: block;
+    margin: 0px auto;
+}
+
+#b_distance {
+    bottom: -10%;
+}
+
+#property {
+    height: 100%;
+    width: 100%;
+    bottom: -10%;
+}
+
+#pos_l {
+    left: 30%;
+}
+
+#dec_l {
+    left: 25%;
+}

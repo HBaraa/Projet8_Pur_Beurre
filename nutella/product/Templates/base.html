@@ -38,14 +38,14 @@
                     <div class="col-1">
                         <div class="connected">
                             <a href='{% url "moncompte" %}'>
-                                <i class="fa-sharp fa-solid fa-user" style="left:20px"></i>
+                                <i class="fa-sharp fa-solid fa-user" id="ic1_size"></i>
                             </a>
                         </div>
                     </div>
                         <div class="col-1">
                             <div class="connected">
                                 <a href='{% url "favorite" %}'>
-                                    <i class="fa-sharp fa-solid fa-carrot" style="left:20px; width:30px; height:30px"></i>
+                                    <i class="fa-sharp fa-solid fa-carrot" id="ic_size"></i>
                                 </a>
                             </div>
                         </div>
@@ -73,14 +73,14 @@
 
     {% block content %}{% endblock %}
 
-    <footer class="container col-6 " style="border: 1px solid black; visibility:visible; position:relative; bottom:0%;width=800px;" >
+    <footer class="container col-6 " id="pagefeet">
         <div class="row" >
-            <div class="col-4" style="position:relative; left:8%;">
+            <div class="col-4" id="pos1">
                 <div class="row">
                     <a href="{% url 'mention' %}" >Mention légale</a>
                 </div>
             </div>
-            <div class="col-4" style="position:relative; left:50%;">
+            <div class="col-4" id="pos2">
                 <div class="row">
                     <a href="contact">contact</a></li>
                 </div>

@@ -6,12 +6,12 @@
 <div class="container align-items-center justify-content-center">
     <div class="row">
         <div class="col-12 center">
-            <div class="masthead" style="background-color: black;  height: 412px; position: relative;">
+            <div class="masthead" id="bg_products">
                 <div class="container px-4 px-lg-5" style="padding-top: 10rem; padding-bottom: calc(10rem - 4.5rem); background-image: url('{{ element.image_large}}'); background-position: center; background-repeat: no-repeat; background-attachment: scroll; background-size: auto;">
                     <hr class="text_zone divider my-4" />
                     <div class="mastbg" >
-                        <h4 style="color: white;"> <strong>Le produit que vous avez choisi est {{ element.name }} </strong></h4>
-                        <h4 style="color: #f1b099;"> {{ element.name }} </h4>
+                        <h4 id="color1"> <strong>Le produit que vous avez choisi est {{ element.name }} </strong></h4>
+                        <h4 id="color2"> {{ element.name }} </h4>
                         <div  class="nutriscore_pic" >
                             {% if element.nutriscore == '1' %}
                                 <img src="{% static 'images/a.png' %}"  alt=””>
@@ -37,9 +37,9 @@
                             <h5> Vous avez fait le meuiller choix </h5>
                             {% for x in substitutes %}
                                 {% if x.nutriscore == 1 %}
-                                    <div class="col-lg-4 col-md-ms-1" style="border:1px solid black">
+                                    <div class="col-lg-4 col-md-ms-1" id="bd">
                                         <div class="card">
-                                            <div class="card-body center" style="display: block; margin: 0px auto;">
+                                            <div class="card-body center" id="mg">
                                                 <img class=”card-img-top” src={{ x.image_small }} >
                                                 <h6 class="card-title">{{ x.name }}</h6>
                                             <div  class="nutriscore_pic" >
@@ -53,11 +53,11 @@
                         {% if element.nutriscore != 1 %}
                             {% for x in substitutes %}
                                 {%if x.nutriscore < element.nutriscore %}
-                                    <div class="col-4 md-1" style="border:1px solid black">
+                                    <div class="col-4 md-1" id="bd">
                                         <div class="card center">
-                                            <div class="card-body text-center" style="bottom:-10%;">
+                                            <div class="card-body text-center" id="b_distance">
                                                 <a href="{% url 'details' x.id %}">
-                                                    <img class="card-img-top " src={{ x.image_small }} style="height:100%; width:100%; bottom:-10%">
+                                                    <img class="card-img-top " src={{ x.image_small }} id="property">
                                                     <h6 class="card-title">{{ x.name }}</h6>
                                                 </a>
                                                 <div  class="nutriscore_pic" >
