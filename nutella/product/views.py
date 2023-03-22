@@ -20,10 +20,6 @@ def home(request):
     return render(request, "home.html")
 
 
-def accueil(request):
-    return render(request, "accueil.html")
-
-
 def contact(request):
     return render(request, "contact.html")
 
