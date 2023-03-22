@@ -45,6 +45,8 @@ DEBUG = True
 DATABASES = {}
 DATABASES["default"] = dj_database_url.config(conn_max_age=600)
 
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://pur-beurre.herokuapp.com/']
+
 # ajout des liens vers les fichiers statiques
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
