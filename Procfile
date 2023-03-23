@@ -1,1 +1,1 @@
-﻿web: gunicorn nutella.wsgi --log-file -
+﻿web: gunicorn Pb_app.nutella.product.wsgi --log-file -
