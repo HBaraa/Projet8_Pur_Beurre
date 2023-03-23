@@ -59,7 +59,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-OPENFOODFACTS_PAGE_SIZE = os.environ.get("OPENFOODFACTS_PAGE_SIZE", 1000)
+OPENFOODFACTS_PAGE_SIZE = os.environ.get("OPENFOODFACTS_PAGE_SIZE", 100)
 
 # Application definition
 
