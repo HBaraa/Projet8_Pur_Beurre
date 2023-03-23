@@ -108,3 +108,4 @@ Werkzeug==2.2.3
 whitenoise==6.4.0
 wsproto==1.2.0
 xmltodict==0.13.0
+django-debug-toolbar==2.2

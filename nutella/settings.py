@@ -40,12 +40,13 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 # configurer les serveurs autorisés à accéder à votre app
 
 DATABASES = {}
 DATABASES["default"] = dj_database_url.config(conn_max_age=600)
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://pur-beurre.herokuapp.com/']
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "https://pur-beurre.herokuapp.com/"]
 
 # ajout des liens vers les fichiers statiques
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -77,6 +78,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
+
 
 ROOT_URLCONF = "nutella.urls"
 
