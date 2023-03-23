@@ -24,7 +24,7 @@ from .product import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/login/", views.MyLoginView.as_view(), name="login"),
-    path("pur-beurre.herokuapp.com/", views.home, name="home"),
+    path("/", views.home, name="home"),
     path("moncompte/", views.moncompte, name="moncompte"),
     path("contact/", views.contact, name="contact"),
     path("mention/", views.mention, name="mention"),
