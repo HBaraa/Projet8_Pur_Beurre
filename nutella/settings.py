@@ -50,7 +50,6 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
     "https://pur-beurre.herokuapp.com/",
-    "pur-beurre.herokuapp.com",
 ]
 
 # ajout des liens vers les fichiers statiques
