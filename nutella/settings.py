@@ -15,6 +15,7 @@ import os
 from django.conf import settings
 import dj_database_url
 import dotenv
+import django_heroku
 
 
 settings.configure(DEBUG=True)
@@ -115,15 +116,15 @@ WSGI_APPLICATION = "nutella.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "ProOc",
-        "USER": "marie",
-        "PASSWORD": "m3018",
-        "HOST": "localhost",
+        "NAME": "dbhq1tg54tgm0p",
+        "USER": "wqyieprezakvtr",
+        "PASSWORD": "8317818bd4fcdf37a3b8aea189bec932890ede180ea17439f70e0de1aa129825",
+        "HOST": "ec2-34-236-103-63.compute-1.amazonaws.com",
         "PORT": "",
     }
 }
 
-DATABASES["default"] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+# DATABASES["default"] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 CATEGORIE_LIST = [
     "Snacks",
@@ -171,6 +172,7 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATICFILES_DIRS = ["nutella/product/static/"]
 
+django_heroku.settings(locals())
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
