@@ -113,17 +113,6 @@ WSGI_APPLICATION = "nutella.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "dbhq1tg54tgm0p",
-        "USER": "wqyieprezakvtr",
-        "PASSWORD": "8317818bd4fcdf37a3b8aea189bec932890ede180ea17439f70e0de1aa129825",
-        "HOST": "ec2-34-236-103-63.compute-1.amazonaws.com",
-        "PORT": "",
-    }
-}
-
 # DATABASES["default"] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 CATEGORIE_LIST = [
