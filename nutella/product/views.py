@@ -34,7 +34,7 @@ def mention(request):
 
 class MyLoginView(auth_views.LoginView):
     template_name = "accounts/login.html"
-    success_url = ""
+    success_url = "home.html"
 
 
 def signup(request):
