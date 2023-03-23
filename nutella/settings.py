@@ -9,12 +9,13 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-import django
+
 from pathlib import Path
 import os
 from django.conf import settings
 import dj_database_url
 import dotenv
+
 
 settings.configure(DEBUG=True)
 
@@ -121,6 +122,8 @@ DATABASES = {
         "PORT": "",
     }
 }
+
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 CATEGORIE_LIST = [
     "Snacks",
