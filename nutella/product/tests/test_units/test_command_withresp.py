@@ -12,7 +12,7 @@ from io import StringIO
 @override_settings(CATEGORIE_LIST=["Snacks"])
 def get_items():
     response = requests.get(
-        "https://fr.openfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=Snacks&json=1"
+        "https://fr.openfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=Snacks&tagtype_1=categories&tag_contains_1=contains&tag_1=Snacks&sort_by=unique_scans_n&page_size=1000&axis_x=energy&axis_y=products_n&action=process&page=2&json=1"
     )
     if response.status_code == 200:
         print(response.json()["value"])
@@ -25,7 +25,7 @@ def get_items():
 @responses.activate
 @override_settings(CATEGORIE_LIST=["Snacks"])
 def tests_serch_openfood_failed():
-    url = f"https://fr.openfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=Snacks&json=1"
+    url = f"https://fr.openfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=Snacks&tagtype_1=categories&tag_contains_1=contains&tag_1=Snacks&sort_by=unique_scans_n&page_size=1000&axis_x=energy&axis_y=products_n&action=process&page=2&json=1"
     responses.add(
         responses.GET,
         url,
@@ -43,7 +43,7 @@ class ClosepollTest(TestCase):
     def test_search(self):
         responses.add(
             responses.GET,
-            f"https://fr.openfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=Snacks&json=1",
+            f"https://fr.openfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=Snacks&tagtype_1=categories&tag_contains_1=contains&tag_1=Snacks&sort_by=unique_scans_n&page_size=1000&axis_x=energy&axis_y=products_n&action=process&page=2&json=1",
             json={
                 "count": 1,
                 "page": 1,

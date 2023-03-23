@@ -26,9 +26,12 @@ class GetDatas:
         for categ in settings.CATEGORIE_LIST:
             r = requests.get(
                 "https://fr.openfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0="
-                + str(categ)
-                + "&page_size="
-                + "&json=1"
+                + categ
+                + "&tagtype_1=categories&tag_contains_1=contains&tag_1="
+                + categ
+                + "&sort_by=unique_scans_n&page_size="
+                + str(settings.OPENFOODFACTS_PAGE_SIZE)
+                + "&axis_x=energy&axis_y=products_n&action=process&page=2&json=1"
             )
             try:
                 self.current_product = json.loads(r.content)
