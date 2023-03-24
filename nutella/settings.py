@@ -15,7 +15,6 @@ import os
 from django.conf import settings
 import dj_database_url
 import dotenv
-import django_heroku
 
 
 settings.configure(DEBUG=True)
@@ -34,7 +33,7 @@ if os.path.isfile(dotenv_file):
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
-# DJANGO_SETTINGS_MODULE = os.environ.get("DJANGO_SETTINGS_MODULE")
+DJANGO_SETTINGS_MODULE = os.environ.get("DJANGO_SETTINGS_MODULE")
 
 # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "nutella.settings")
 
@@ -46,7 +45,7 @@ DEBUG = True
 # configurer les serveurs autorisés à accéder à votre app
 
 DATABASES = {}
-DATABASES["default"] = dj_database_url.config(conn_max_age=600)
+# DATABASES["default"] = dj_database_url.config(conn_max_age=600)
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
@@ -56,8 +55,8 @@ ALLOWED_HOSTS = [
 
 # ajout des liens vers les fichiers statiques
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+#STATIC_ROOT = os.path.join(BASE_DIR, "static")
+#STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 OPENFOODFACTS_PAGE_SIZE = os.environ.get("OPENFOODFACTS_PAGE_SIZE", 1000)
 
@@ -124,6 +123,16 @@ CATEGORIE_LIST = [
     "Plats préparés",
 ]
 
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "ProOc",
+        "USER": "marie",
+        "PASSWORD": "m3018",
+        "HOST": "localhost",
+        "PORT": "",
+    }
+}
 
 
 # Password validation

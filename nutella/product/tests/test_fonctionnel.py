@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 
 
 BASE_URL = "http://127.0.0.1:8000/"
@@ -16,8 +17,8 @@ class TestFunctionnal(unittest.TestCase):
 
     def test_search_prod(self):
         self.driver.get(BASE_URL + "home/")
-        self.driver.find_element("id", "searchForm")
-        self.driver.find_element("id", "searchForm").submit()
+        self.driver.find_element(by=By.ID, value="searchForm")
+        self.driver.find_element(by=By.ID, value="searchForm").submit()
         self.assertTrue(self.driver.title == "Pur Beurre for Nutella lovers")
         self.assertTrue(
             self.driver.current_url == "http://127.0.0.1:8000/all_products/?query="
