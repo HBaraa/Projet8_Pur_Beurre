@@ -13,9 +13,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 from django.conf import settings
-import dj_database_url
 import dotenv
 
+# import dj_database_url
 
 settings.configure(DEBUG=True)
 
