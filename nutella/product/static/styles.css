@@ -36,12 +36,12 @@
 
 #connect {
     height: 700px;
-    width: 900px;
+    width: 1250px;
     position: relative;
     top: 0%;
     background-image: url('../static/images/bghome.png');
     background-repeat: no-repeat;
-    background-size: 900px 700px;
+    background-size: 1250px 700px;
     background-position: 0px 0px;
 }
 
