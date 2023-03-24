@@ -2,16 +2,18 @@
 {% load static %}
 {% block content %}
 <div class="container align-items-center justify-content-center text-center"  >
-    <div class="col-12 text-center ">
+    <div class="sign" id="sign">
         <div class="row center" id="regiter">
-            <div class="insc" id="insc">
-                <div class="center">
-                    <div class=" formulaire col-6" id="pos_l">
-                        <form method="POST">
-                            {{ form.as_p }}
-                            {% csrf_token %}
-                            <input id="submit" type="submit" class="btn btn-primary btn-xl js-scroll-trigger" value="Submit">
-                        </form>
+            <div class="col-12 text-center ">
+                <div class="insc" id="insc">
+                    <div class="center">
+                        <div class=" formulaire col-6" id="pos_l">
+                            <form method="POST">
+                                {{ form.as_p }}
+                                {% csrf_token %}
+                                <input id="submit" type="submit" class="btn btn-primary btn-xl js-scroll-trigger" value="Submit">
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
