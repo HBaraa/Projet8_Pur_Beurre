@@ -34,7 +34,7 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = os.environ.get("SECRET_KEY")
 DJANGO_SETTINGS_MODULE = os.environ.get("DJANGO_SETTINGS_MODULE")
 
-# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "nutella.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "nutella.settings")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -44,7 +44,7 @@ DEBUG = True
 # configurer les serveurs autorisés à accéder à votre app
 
 DATABASES = {}
-DATABASES["default"] = dj_database_url.config(conn_max_age=600)
+# DATABASES["default"] = dj_database_url.config(conn_max_age=600)
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
@@ -121,6 +121,7 @@ CATEGORIE_LIST = [
     "Pains",
     "Plats préparés",
 ]
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
