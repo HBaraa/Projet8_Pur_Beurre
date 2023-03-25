@@ -34,7 +34,7 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = os.environ.get("SECRET_KEY")
 DJANGO_SETTINGS_MODULE = os.environ.get("DJANGO_SETTINGS_MODULE")
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "nutella.settings")
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "nutella.settings")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
