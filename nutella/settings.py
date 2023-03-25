@@ -14,8 +14,7 @@ from pathlib import Path
 import os
 from django.conf import settings
 import dotenv
-
-# import dj_database_url
+import dj_database_url
 
 settings.configure(DEBUG=True)
 
@@ -45,7 +44,7 @@ DEBUG = True
 # configurer les serveurs autorisés à accéder à votre app
 
 DATABASES = {}
-# DATABASES["default"] = dj_database_url.config(conn_max_age=600)
+DATABASES["default"] = dj_database_url.config(conn_max_age=600)
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
@@ -55,8 +54,8 @@ ALLOWED_HOSTS = [
 
 # ajout des liens vers les fichiers statiques
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-#STATIC_ROOT = os.path.join(BASE_DIR, "static")
-#STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 OPENFOODFACTS_PAGE_SIZE = os.environ.get("OPENFOODFACTS_PAGE_SIZE", 1000)
 
@@ -122,18 +121,6 @@ CATEGORIE_LIST = [
     "Pains",
     "Plats préparés",
 ]
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "ProOc",
-        "USER": "marie",
-        "PASSWORD": "m3018",
-        "HOST": "localhost",
-        "PORT": "",
-    }
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
