@@ -44,7 +44,7 @@ DEBUG = True
 # configurer les serveurs autorisés à accéder à votre app
 
 DATABASES = {}
-# DATABASES["default"] = dj_database_url.config(conn_max_age=600)
+DATABASES["default"] = dj_database_url.config(conn_max_age=600)
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
