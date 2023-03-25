@@ -34,7 +34,7 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = os.environ.get("SECRET_KEY")
 # DJANGO_SETTINGS_MODULE = os.environ.get("DJANGO_SETTINGS_MODULE")
 
-# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "nutella.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "nutella.settings")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -159,16 +159,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = ["nutella/product/static/"]
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "ProOc",
-        "USER": "marie",
-        "PASSWORD": "m3018",
-        "HOST": "localhost",
-        "PORT": "",
-    }
-}
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
