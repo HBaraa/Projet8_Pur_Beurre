@@ -12546,10 +12546,9 @@ hr.divider-light {
         background-color: rgba(241, 234, 234, 0.863);
 }
 
-#ic_size {
+#carr {
     position: relative;
-    left: 50px;
-        top: 0px;
+    top: 2px;
         width: 40px;
         height: 40px;
 }
@@ -12557,12 +12556,13 @@ hr.divider-light {
 #ic1_size {
     position: relative;
         top: 4px;
+        right: 40px;
 }
 
 #ic_size2 {
     position: relative;
-    left: 70px;
         top: 4px;
+        left: 20px;
 
 }
 
