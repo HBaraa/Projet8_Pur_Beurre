@@ -53,11 +53,11 @@ def signup(request):
                     second_name=second_name,
                     password=password,
                 )
-            login(request, user)
-            return redirect(reverse("home"))
-        else:
-            login(request, user)
-            return redirect(reverse("login"))
+                login(request, user)
+                return redirect(reverse("home"))
+            else:
+                login(request, user)
+                return redirect(reverse("login"))
     else:
         form = SignUpForm()
     return render(request, "signup.html", context={"form": form})

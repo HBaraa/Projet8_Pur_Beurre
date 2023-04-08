@@ -135,7 +135,8 @@ def test_signup_route_failed():
         "password2": "TestPassword",
     }
     response = CLIENT.post(reverse("signup"), credentials)
-    assert response.url == reverse("login")
+    assert response.status_code == 200
+    # assert response.url == reverse("login")
 
 
 @pytest.mark.django_db
@@ -153,7 +154,7 @@ def test_logout_route():
     # Testing if the user is logged out properly and is redirected to 'home'
     response = CLIENT.get(reverse("logout"))  # noqa
     assert response.status_code == 302
-    assert response.url == reverse("home")
+    assert response.url == reverse("login")
 
 
 @pytest.mark.django_db

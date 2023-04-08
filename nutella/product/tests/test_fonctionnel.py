@@ -15,7 +15,7 @@ class TestFunctionnal(unittest.TestCase):
         self.driver.maximize_window()
 
     def test_search_prod(self):
-        self.driver.get(BASE_URL + "home/")
+        self.driver.get(BASE_URL + "/")
         self.driver.find_element(By.ID, 'searchForm')
         self.driver.find_element(By.ID, 'searchForm').submit()
         self.assertTrue(self.driver.title == "Pur Beurre for Nutella lovers")
