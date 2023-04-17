@@ -40,19 +40,8 @@ DEBUG = True
 
 # configurer les serveurs autorisés à accéder à votre app
 
-# DATABASES = {}
-# DATABASES["default"] = dj_database_url.config(conn_max_age=600)
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "purbeurre",
-        "USER": "baraam",
-        "PASSWORD": "mb3003",
-        "HOST": "localhost",
-        "PORT": "5432",
-    }
-}
+DATABASES = {}
+DATABASES["default"] = dj_database_url.config(conn_max_age=600)
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
