@@ -13,7 +13,7 @@ from django.conf import settings
 import dotenv
 import dj_database_url
 
-settings.configure(DEBUG=True)
+# settings.configure(DEBUG=True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,25 +23,29 @@ dotenv_file = os.path.join(BASE_DIR, ".env")
 if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
 
+
 # django.setup()
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = str(os.getenv("SECRET_KEY"))
 # DJANGO_SETTINGS_MODULE = os.environ.get("DJANGO_SETTINGS_MODULE")
 
 # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "nutella.settings")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if os.environ.get("ENV") == "PRODUCTION":
+    DEBUG = False
+else:
+    DEBUG = True
 
 
 # configurer les serveurs autorisés à accéder à votre app
 
 DATABASES = {}
-DATABASES["default"] = dj_database_url.config(conn_max_age=600)
+# DATABASES["default"] = dj_database_url.config(conn_max_age=600)
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
@@ -52,7 +56,7 @@ ALLOWED_HOSTS = [
 # ajout des liens vers les fichiers statiques
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 OPENFOODFACTS_PAGE_SIZE = os.environ.get("OPENFOODFACTS_PAGE_SIZE", 1000)
 
@@ -77,7 +81,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 
@@ -108,7 +111,7 @@ WSGI_APPLICATION = "nutella.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 
-DATABASES["default"] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+# DATABASES["default"] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 CATEGORIE_LIST = [
     "Snacks",

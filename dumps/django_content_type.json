@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "app_label": "admin",
+    "model": "logentry"
+  },
+  {
+    "id": 2,
+    "app_label": "auth",
+    "model": "permission"
+  },
+  {
+    "id": 3,
+    "app_label": "auth",
+    "model": "group"
+  },
+  {
+    "id": 4,
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  },
+  {
+    "id": 5,
+    "app_label": "sessions",
+    "model": "session"
+  },
+  {
+    "id": 6,
+    "app_label": "product",
+    "model": "customuser"
+  },
+  {
+    "id": 7,
+    "app_label": "product",
+    "model": "categories"
+  },
+  {
+    "id": 8,
+    "app_label": "product",
+    "model": "products"
+  },
+  {
+    "id": 9,
+    "app_label": "product",
+    "model": "favorite"
+  }
+]
