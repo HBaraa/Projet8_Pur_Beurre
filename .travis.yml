@@ -1,9 +1,19 @@
 ﻿language: python
 python:
-  - "3.9"
-# command to install dependencies
-install:
+  - '3.9'
+
+before_script:
   - pip install -r requirements.txt
-# command to run tests
+
+env: DJANGO_SETTINGS_MODULE="disquaire_project.settings"
+
+services:
+  - postgresql
+
 script:
-  - pytest # or py.test for Python versions 3.5 and below
+  - ./manage.py test
+
+# safelist
+branches:
+  only:
+    - staging
