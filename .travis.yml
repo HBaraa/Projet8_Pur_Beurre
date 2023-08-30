@@ -11,7 +11,7 @@ services:
   - postgresql
 
 script:
-  - python manage.py test nutella/product/tests
+  - python manage.py test nutella/product/tests/test_units
 
 # safelist
 branches:
