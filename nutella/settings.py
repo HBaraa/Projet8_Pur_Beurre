@@ -45,6 +45,7 @@ else:
 # configurer les serveurs autorisés à accéder à votre app
 
 DATABASES = {}
+DATABASES["default"] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 # DATABASES["default"] = dj_database_url.config(conn_max_age=600)
 
 ALLOWED_HOSTS = [
@@ -110,8 +111,6 @@ WSGI_APPLICATION = "nutella.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-
-DATABASES["default"] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 
 CATEGORIE_LIST = [
