@@ -113,6 +113,17 @@ WSGI_APPLICATION = "nutella.wsgi.application"
 
 # DATABASES["default"] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "ProOc",
+        "USER": "marie",
+        "PASSWORD": "m3018",
+        "HOST": "localhost",
+        "PORT": "",
+    }
+}
+
 CATEGORIE_LIST = [
     "Snacks",
     "Céréales et dérivés",
