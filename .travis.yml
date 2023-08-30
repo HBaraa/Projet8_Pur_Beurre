@@ -8,7 +8,7 @@ before_script:
 env: DJANGO_SETTINGS_MODULE="nutella.settings"
 
 services:
-  - postgresql
+  - postgres
 
 script:
   - python manage.py test nutella/product/tests
