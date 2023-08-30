@@ -30,6 +30,7 @@ coreschema==0.0.4
 coverage==7.2.2
 cryptography==39.0.1
 defusedxml==0.7.1
+dj-database-url==0.5.0
 dj-rest-auth==2.2.8
 Django==4.1.3
 django-allauth==0.50.0
@@ -188,4 +189,3 @@ Werkzeug==2.2.3
 whitenoise==6.4.0
 wsproto==1.2.0
 xmltodict==0.13.0
-dj-database-url==2.1.0
