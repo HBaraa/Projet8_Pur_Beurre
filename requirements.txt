@@ -189,3 +189,4 @@ Werkzeug==2.2.3
 whitenoise==6.4.0
 wsproto==1.2.0
 xmltodict==0.13.0
+dj-database-url==2.1.0
